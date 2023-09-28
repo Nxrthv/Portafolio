@@ -2,10 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
 
 .nav{
-    max-width: 100%;
     background-color: black;
     display: flex;
-    padding-right: 20px;
+    flex-wrap: wrap;
     margin-top: 20px;
     justify-content: flex-end;
 }
@@ -15,7 +14,7 @@
         font-family: 'Exo 2', sans-serif;
         display: inline;
         padding: 5px;
-        margin: 0 15px 8px 15px;
+        margin: 0 8px 8px 8px;
     }
 
     li:hover{

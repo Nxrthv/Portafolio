@@ -76,18 +76,26 @@ body{
     background-color: rgb(15, 15, 15);
 }
 
-@keyframes square-out-hesitate {
-    0% {
-      clip-path: inset(0 0 0 0);
+.content-skills{
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-evenly;
+}
+    .btn-skill{
+        background-color: rgb(52, 47, 47);
+        display: flex;
+        border: 2px solid white;
+        border-radius: 10px;
     }
-    40% {
-      clip-path: inset(33% 33% 33% 33%);
+    .skill{
+        padding: 5px 50px 5px 50px; 
+        color: white;
+        text-decoration: none;
+        margin: auto;
+        display: flex;
+        align-items: center;
     }
-    100% {
-      clip-path: inset(100% 100% 100% 100%);
+    img{
+        width: 40px;
     }
-  }
-
-  [transition-style="out:square:hesitate"] {
-    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-hesitate both;
-  }

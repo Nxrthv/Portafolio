@@ -9,44 +9,9 @@ body{
     display: none;
 }
 
-.nav{
-    max-width: 100%;
-    background-color: black;
-    display: flex;
-    padding-right: 20px;
-    margin-top: 20px;
-    justify-content: flex-end;
-}
-    li {
-        list-style: none;
-        color: white;
-        font-family: 'Exo 2', sans-serif;
-        display: inline;
-        padding: 5px;
-        margin: 0 15px 8px 15px;
-    }
-
-    li:hover{
-        border-bottom: 1px solid white;
-        cursor: pointer;
-    }
-    li a{
-        text-decoration: none;
-        color: white;
-    }
-    .pr{
-        display: flex;
-        text-decoration: none;
-        color: white;
-        font-family: 'Exo 2', sans-serif;
-        font-size: 16px;
-        margin: 15px auto auto 30px;
-    }
-
 .projects{
     padding: 15px;
     flex-wrap: wrap;
-    margin: 50px auto 0 auto;
     display: flex;
     margin: 5px;
 }
