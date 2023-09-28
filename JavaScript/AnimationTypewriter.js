@@ -1,4 +1,4 @@
-const palabras = ["Software Engineer...", "Web Developer...", "Full-Stack Engineer..."];
+const palabras = ["Software Engineer", "Web Developer", "Front Developer"];
 const MaquinaDeEscribir = document.getElementById("animation");
 
 function escribirPalabra(palabra){
