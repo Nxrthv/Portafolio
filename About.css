@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inconsolata&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inconsolata&family=Overpass:wght@200&display=swap');
+
+body{
+    background-color: black;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.content{
+    color: white;
+    font-family: 'Exo 2', sans-serif;
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+    .cont-text{
+        background-image: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        padding: 70px;
+    }
+    .sub-text{
+        margin-bottom: -20px;
+    }
+    .title{
+        margin-bottom: -10px;
+    }
+    .perfil{
+        width: 280px;
+        height: 280px;
+        border-radius: 50%;
+        box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d;;
+
+    }
+    .animation{
+        font-family: 'Dela Gothic One', cursive;
+        font-family: 'Inconsolata', monospace;
+    }
+    .welcome{
+        background-image: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+        position: absolute;
+        margin-top: 185px;
+        margin-left: -260px;
+    }
+    .welcome a{
+        text-decoration: none;
+    }
+    .animation::after{
+        content: '';
+        font-weight: 500;
+        position: absolute;
+        margin-left: 5px;
+        animation: typing 2s steps(20, end) infinite;
+    }
+
+.about-me{
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Overpass', sans-serif;
+    color: white;
+    width: 600px;
+    margin: 80px auto 50px auto;
+    padding: 20px 50px 20px 50px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d;;
+    background-color: rgb(15, 15, 15);
+}
+
+@keyframes square-out-hesitate {
+    0% {
+      clip-path: inset(0 0 0 0);
+    }
+    40% {
+      clip-path: inset(33% 33% 33% 33%);
+    }
+    100% {
+      clip-path: inset(100% 100% 100% 100%);
+    }
+  }
+
+  [transition-style="out:square:hesitate"] {
+    animation: 2.5s cubic-bezier(.25, 1, .30, 1) square-out-hesitate both;
+  }

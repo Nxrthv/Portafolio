@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
+
+.nav{
+    max-width: 100%;
+    background-color: black;
+    display: flex;
+    padding-right: 20px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+    li {
+        list-style: none;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        display: inline;
+        padding: 5px;
+        margin: 0 15px 8px 15px;
+    }
+
+    li:hover{
+        border-bottom: 1px solid white;
+        cursor: pointer;
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+    }
+    .pr{
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 16px;
+        margin: 15px auto auto 30px;
+    }

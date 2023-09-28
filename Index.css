@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
+
+body{
+    background-color: black;
+}
+
+::-webkit-scrollbar{
+    display: none;
+}
+
+.nav{
+    max-width: 100%;
+    background-color: black;
+    display: flex;
+    padding-right: 20px;
+    margin-top: 20px;
+    justify-content: flex-end;
+}
+    li {
+        list-style: none;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        display: inline;
+        padding: 5px;
+        margin: 0 15px 8px 15px;
+    }
+
+    li:hover{
+        border-bottom: 1px solid white;
+        cursor: pointer;
+    }
+    li a{
+        text-decoration: none;
+        color: white;
+    }
+    .pr{
+        display: flex;
+        text-decoration: none;
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        font-size: 16px;
+        margin: 15px auto auto 30px;
+    }
+
+.projects{
+    padding: 15px;
+    flex-wrap: wrap;
+    margin: 50px auto 0 auto;
+    display: flex;
+    margin: 5px;
+}
+    .cardr {
+        margin: 50px auto auto 8%;
+        width: 1000px;
+        height: 550px;
+        background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
+        border-radius: 20px;
+        transition: all .3s;
+       }
+       .cardr:hover {
+        box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
+       }
+       .card2r {
+        margin-left: -3px;
+        width: 1006px;
+        height: 550px;
+        background-color: #1a1a1a;
+        background-image: url(/Imgs/bgprincipal.jpg);
+        background-size: cover;
+        transition: all .2s;
+        border-radius: 20px;
+       }
+       .card2r:hover {
+        transform: scale(0.99);
+        border-radius: 20px;
+       }
+       .contentr{
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+       }
+       .img-projectr{
+        width: 450px;
+        height: 300px;
+        padding: 35px;
+        padding-top: 51px;
+       }
+       .text-contentr h2{
+        font-size: 30px;
+       }
+       .text-contentr{
+        align-items: center;
+        width: 400px;
+        text-align: right;
+        padding-right: 30px;
+       }
+       .bgimgr{
+        margin-top: -38.5%;
+        width: 100%;
+        height: 100%;
+        transition: .2s ease;
+       }
+       .bgimgr:hover{
+        opacity: 0;
+        transition: .2s ease;
+       }
+
+    .cardl {
+        margin: 50px 8% 0 auto;
+        width: 1000px;
+        height: 550px;
+        background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
+        border-radius: 20px;
+        transition: all .3s;
+       }
+       .cardl:hover {
+        box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
+       }
+       .card2l {
+        margin-left: -3px;
+        width: 1006px;
+        height: 550px;
+        background-color: #1a1a1a;
+        background-image: url(/Imgs/bgprincipal.jpg);
+        background-size: cover;
+        transition: all .2s;
+        border-radius: 20px;
+       }
+       .card2l:hover {
+        transform: scale(0.99);
+        border-radius: 20px;
+       }
+       .contentl{
+        color: white;
+        font-family: 'Josefin Sans', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        z-index: -1;
+       }
+       .img-projectl{
+        width: 450px;
+        height: 300px;
+        padding: 35px;
+        padding-top: 51px;
+       }
+       .text-contentl h2{
+        font-size: 30px;
+       }
+       .text-contentl{
+        align-items: center;
+        width: 400px;
+        text-align: left;
+        padding-left: 30px;
+       }
+       .bgimgl{
+        margin-top: -38.5%;
+        width: 100%;
+        height: 100%;
+        transition: .2s ease;
+       }
+       .bgimgl:hover{
+        opacity: 0;
+        transition: .2s ease;
+       }

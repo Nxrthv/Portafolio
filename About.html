@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="About.css">
+    <title>About Me</title>
+</head>
+<div id="nav"></div>
+<body>
+    <div class="content">
+        <div class="cont-text">
+            <p class="sub-text">Hello World, I'm</p>
+            <h1 class="title">Nolberth Vargas</h1>
+            <h3 class="animation" id="animation"></h3>
+        </div>
+        <p class="welcome">Welcome to My personal website. <a href="">👋🏼</a></p>
+        <img class="perfil" src="/Imgs/perfil.jfif" alt="">
+    </div>
+    <div class="about-me">
+        <p class="text">Desarrollador web apasionado y altamente competente 
+            con experiencia en la creación de sitios web atractivos y funcionales. 
+            Experto en HTML, CSS y JavaScript, con habilidades en diseño responsivo 
+            y optimización de rendimiento. Comprometido con la entrega de soluciones 
+            web de alta calidad y satisfacción del cliente.</p>
+    </div>
+</body>
+<script src="/JavaScript/AnimationTypewriter.js"></script>
+<script>
+    fetch('Nav.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('nav').innerHTML = data;
+        });
+</script>
+</html>
