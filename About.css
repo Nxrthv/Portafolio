@@ -24,6 +24,7 @@ body{
         -webkit-background-clip: text;
         color: transparent;
         padding: 70px;
+        margin-left: -70px;
     }
     .sub-text{
         margin-bottom: -20px;
@@ -43,13 +44,13 @@ body{
         font-family: 'Inconsolata', monospace;
     }
     .welcome{
-        background-image: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        background: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         position: absolute;
         margin-top: 185px;
-        margin-left: -330px;
+        margin-left: -400px;
     }
     .welcome a{
         text-decoration: none;
@@ -68,39 +69,85 @@ body{
     font-family: 'Overpass', sans-serif;
     color: white;
     width: 600px;
-    margin: 80px auto 50px auto;
+    margin: 80px auto 60px auto;
     padding: 20px 50px 20px 50px;
     text-align: center;
-    border-radius: 15px;
-    box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d;;
+    border-radius: 10px;
+    box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d;
     background-color: rgb(15, 15, 15);
+}
+
+.title-skills{
+    color: white;
+    text-align: start;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 55%;
+    margin: auto auto 20px auto;
+}
+.title-skills:hover{
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 .content-skills{
     display: flex;
-    width: 80%;
+    flex-wrap: wrap;
+    width: 750px;
     margin: auto;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
     .btn-skill{
-        background-color: rgb(52, 47, 47);
+        width: 165px;
+        background-color: rgb(15, 15, 15);
         display: flex;
-        border: 2px solid white;
-        border-radius: 10px;
+        border: 1px solid rgb(55, 53, 53);
+        border-radius: 5px;
+        margin-bottom: 20px;
+        
+    }
+    .btn-skill:hover{
+        opacity: .8;
+        background-color: rgb(42, 40, 40);
+        box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d; 
+    }
+    .btn-skill span {
+        margin-top: 13px;
+        cursor: pointer;
+        transition: 0.4s;
+       }
+       
+    .btn-skill span:after {
+        content: 'Advanced';
+        font-size: 12px;
+        display: flex;
+        opacity: 0;
+        top: 0;
+        transition: 0.7s;
+    }
+    .btn-skill:hover span {
+        position: relative;
+        margin-top: 0;
+       }
+       
+    .btn-skill:hover span:after {
+        opacity: 4;
     }
     .skill{
-        padding: 5px 50px 5px 50px; 
+        font-family: 'Exo 2', sans-serif;
+        font-size: 14px;
         color: white;
         text-decoration: none;
-        margin: auto;
         display: flex;
         align-items: center;
     }
-    img{
-        width: 40px;
+    .icon-skill{
+        padding: 8px;
+        margin-right: 8px;
+        margin-left: 4px;
     }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 700px) {
     .content{
         margin-top: 50px;
         margin-left: -50px;
@@ -142,3 +189,55 @@ body{
         margin: 50px auto 50px auto;
     }
 }
+
+.main{
+    margin-top: -40px;
+    margin-left: -50px;
+    display: flex;
+}
+    .main .option{
+        margin-left: 15px;
+        height: 90px;
+        line-height: 90px;
+        overflow: hidden;
+    }
+    .option li{
+        list-style: none;
+        font-size: 20px;
+        position: relative;
+        top: 0;
+        animation: slide 20s steps(4) infinite;
+    }
+    span{
+        background: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        -webkit-background-clip: text;
+         color: transparent;  
+    }
+    @keyframes slide{
+        100%{
+            top: -360px;
+        }
+    }
+    .option li span{
+        position: relative; 
+    }
+    .option li span:after{
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 120%;
+        background: #000000;
+        border-left: 2px solid rgb(25, 144, 35);
+        left: 0;
+        animation: typing 5s steps(20) infinite;   
+    }
+    @keyframes typing{
+        40%, 60%{
+            left: calc(100%);
+        }
+        100%{
+            left: 0;
+        }
+    }
