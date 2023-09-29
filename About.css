@@ -207,9 +207,7 @@ body{
             height: 150px;
             margin-right: 20px;
         }
-        .animation{
-            font-size: 14px;
-        }
+
         .welcome{
             font-size: 15px;
             margin-top: 120px;
@@ -220,6 +218,9 @@ body{
         }
         .animation::before{
             content: '> ';
+        }
+        .main{
+
         }
 
     .about-me{
