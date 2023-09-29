@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
 
 body{
     background-color: black;
@@ -15,32 +16,29 @@ body{
     display: flex;
     margin: 5px;
 }
-    .cardr {
-        margin: 50px auto auto 8%;
-        width: 1000px;
+    .card {
+        margin: 50px auto auto auto;
+        width: 65%;
         height: 550px;
-        background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
-        border-radius: 20px;
-        transition: all .3s;
+        background: linear-gradient(#6c6c6ca1, #e3e2e29d);
+        transition: all .4s;
+        border-radius: 10px;
        }
-       .cardr:hover {
-        box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
+       .card:hover {
+        box-shadow: 0px 0px 20px 1px rgba(255, 255, 255, 0.3);
        }
-       .card2r {
-        margin-left: -3px;
-        width: 1006px;
+       .card2 {
+        width: 100%;
         height: 550px;
-        background-color: #1a1a1a;
-        background-image: url(/Imgs/bgprincipal.jpg);
+        background: linear-gradient(#151515, #000000);
         background-size: cover;
-        transition: all .2s;
-        border-radius: 20px;
+        transition: all .4s;
        }
-       .card2r:hover {
-        transform: scale(0.99);
-        border-radius: 20px;
+       .card2:hover {
+        transform: scale(0.995);
+        border-radius: 10px;
        }
-       .contentr{
+       .content{
         color: white;
         font-family: 'Josefin Sans', sans-serif;
         display: flex;
@@ -48,218 +46,107 @@ body{
         align-items: center;
         z-index: -1;
        }
-       .img-projectr{
-        width: 450px;
-        height: 300px;
-        padding: 35px;
-        padding-top: 51px;
-       }
-       .text-contentr h2{
-        font-size: 30px;
-       }
-       .text-contentr{
-        align-items: center;
-        width: 400px;
-        text-align: right;
-        padding-right: 30px;
-       }
-       .bgimgr{
-        margin-top: -38.5%;
-        width: 100%;
-        height: 100%;
-        transition: .2s ease;
-       }
-       .bgimgr:hover{
-        opacity: 0;
-        transition: .2s ease;
-       }
-
-    .cardl {
-        margin: 50px 8% 0 auto;
-        width: 1000px;
-        height: 550px;
-        background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
-        border-radius: 20px;
-        transition: all .3s;
-       }
-       .cardl:hover {
-        box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
-       }
-       .card2l {
-        margin-left: -3px;
-        width: 1006px;
-        height: 550px;
-        background-color: #1a1a1a;
-        background-image: url(/Imgs/bgprincipal.jpg);
-        background-size: cover;
-        transition: all .2s;
-        border-radius: 20px;
-       }
-       .card2l:hover {
-        transform: scale(0.99);
-        border-radius: 20px;
-       }
-       .contentl{
-        color: white;
-        font-family: 'Josefin Sans', sans-serif;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+       .img-project{
+        position: absolute;
+        width: 650px;
+        height: 420px;
+        bottom: 0;
+        transition: .4s ease;
         z-index: -1;
+        border-radius: 10px;
        }
-       .img-projectl{
-        width: 450px;
-        height: 300px;
-        padding: 35px;
-        padding-top: 51px;
+       .card2:hover .img-project{
+        transform: translateY(-20px);
+        transition: .4s ease;
        }
-       .text-contentl h2{
+       .text-content h2{
         font-size: 30px;
+        font-weight: 500;
+        font-family: 'Inclusive Sans', sans-serif;
+        margin-bottom: -10px;
        }
-       .text-contentl{
+       .text-content p{
+        font-weight:900;
+       }
+       .text-content{
         align-items: center;
-        width: 400px;
-        text-align: left;
-        padding-left: 30px;
+        margin-left: -440px;
        }
-       .bgimgl{
-        margin-top: -38.5%;
+       .bgimg{
+        margin-top: -11.9%;
         width: 100%;
         height: 100%;
-        transition: .2s ease;
+        transition: .4s ease;
        }
-       .bgimgl:hover{
+       .bgimg:hover{
         opacity: 0;
-        transition: .2s ease;
+        transition: .4s ease;
        }
 
-       @media screen and (max-width: 768px) {
-        .projects{
-            font-size: 12px;
-            display: flex;
+@media screen and (max-width: 768px) {
+    .projects{
+        font-size: 12px;
+        display: flex;
         }
-            .cardr {
-                margin: 10px auto 10px auto;
-                max-width: 100%;
-                height: 225px;
-                background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
-                border-radius: 20px;
-                transition: all .3s;
-               }
-               .cardr:hover {
-                box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
-               }
-               .card2r {
-                margin-left: -.3px;
-                width: 100%;
-                height: 225px;
-                background-color: #1a1a1a;
-                background-image: url(/Imgs/bgprincipal.jpg);
-                background-size: cover;
-                transition: all .3s;
-                border-radius: 20px;
-               }
-               .card2r:hover {
-                transform: scale(0.99);
-                border-radius: 20px;
-               }
-               .contentr{
-                color: white;
-                font-family: 'Josefin Sans', sans-serif;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                z-index: -1;
-               }
-               .img-projectr{
-                width: 120px;
-                height: 100px;
-                padding: 10px;
-                align-items: center;
-                margin-left: 20px;
-               }
-               .text-contentr h2{
-                font-size: 14px;
-               }
-               .text-contentr{
-                width: 50%;
-                margin: 10px -10px auto auto;
-                align-items: center;
-                text-align: right;
-               }
-               .bgimgr{
-                width: 367px;
-                height: auto;
-                margin-top: -226px;
-                height: 228px;
-                transition: .2s ease;
-                position: absolute;             
-                }      
-               .bgimgr:hover{
-                opacity: 0;
-                transition: .2s ease;
-                }
-
-            .cardl {
-                margin: auto;
-                max-width: 100%;
-                height: 225px;
-                background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
-                border-radius: 20px;
-                transition: all .3s;
-               }
-               .cardl:hover {
-                box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
-               }
-               .card2l {
-                margin-left: -.3px;
-                width: 100%;
-                height: 225px;
-                background-color: #1a1a1a;
-                background-image: url(/Imgs/bgprincipal.jpg);
-                background-size: cover;
-                transition: all .3s;
-                border-radius: 20px;
-               }
-               .card2l:hover {
-                transform: scale(0.99);
-                border-radius: 20px;
-               }
-               .contentr{
-                color: white;
-                font-family: 'Josefin Sans', sans-serif;
-                display: flex;
-                justify-content: space-around;
-                align-items: center;
-                z-index: -1;
-               }
-               .img-projectl{
-                width: 120px;
-                height: 100px;
-                padding: 10px;
-                align-items: center;
-                margin-left: 20px;
-               }
-               .text-contentl h2{
-                font-size: 14px;
-               }
-               .text-contentl{
-                width: 50%;
-                margin: 10px -10px auto auto;
-                align-items: center;
-                text-align: left;
-               }
-               .bgimgl{
-                width: 367px;
-                height: auto;
-                margin-top: -226px;
-                height: 228px;
-                transition: .2s ease;
-                position: absolute;             
-                }      
-               .bgimgl:hover{
-                opacity: 0;
-                transition: .2s ease;
-                }
-        
+        .card {
+            margin: 10px auto 10px auto;
+            max-width: 100%;
+            height: 225px;
+            background-image: linear-gradient(163deg, #00ff77a1 0%, #3700ff9d 100%);
+            border-radius: 20px;
+            transition: all .3s;
+        }
+        .card:hover {
+            box-shadow: 0px 0px 20px 1px rgba(0, 255, 117, 0.30);
+        }
+        .card2 {
+            margin-left: -.3px;
+            width: 100%;
+            height: 225px;
+            background-color: #1a1a1a;
+            background-image: url(/Imgs/bgprincipal.jpg);
+            background-size: cover;
+            transition: all .3s;
+            border-radius: 20px;
+        }
+        .card2:hover {
+            transform: scale(0.99);
+            border-radius: 20px;
+        }
+        .content{
+            color: white;
+            font-family: 'Josefin Sans', sans-serif;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            z-index: -1;
+        }
+        .img-project{
+            width: 120px;
+            height: 100px;
+            padding: 10px;
+            align-items: center;
+            margin-left: 20px;
+        }
+        .text-content h2{
+            font-size: 14px;
+        }
+        .text-content{
+            width: 50%;
+            margin: 10px -10px auto auto;
+            align-items: center;
+            text-align: right;
+        }
+        .bgimg{
+            width: 367px;
+            height: auto;
+            margin-top: -226px;
+            height: 228px;
+            transition: .2s ease;
+            position: absolute;             
+        }      
+        .bgimg:hover{
+            opacity: 0;
+            transition: .2s ease;
+        }  
     }
