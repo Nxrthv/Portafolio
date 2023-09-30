@@ -37,7 +37,9 @@
 }
 
 .content-nav a:hover{
-    border-bottom: 1px white solid;
+    transform: scale(1.05);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.661);
+    padding-bottom: 3px;
     cursor: pointer;
 }
 

@@ -19,7 +19,7 @@ body{
     margin-top: 5%;
 }
     .cont-text{
-        background-image: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        background-image: linear-gradient(to right, rgb(21, 20, 20), #f3f3f3);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -36,11 +36,11 @@ body{
         width: 280px;
         height: 280px;
         border-radius: 50%;
-        box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d;;
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.744);
 
     }
     .welcome{
-        background: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        background: linear-gradient(to right, rgb(49, 48, 48), #f3f3f3);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -70,7 +70,7 @@ body{
         animation: slide 20s steps(4) infinite;
     }
     .option span{
-        background: linear-gradient(to right, rgb(25, 144, 35), #3700ff9d);
+        background: linear-gradient(to right, rgb(46, 45, 45), #f3f3f3);
         -webkit-background-clip: text;
          color: transparent;  
     }
@@ -90,7 +90,7 @@ body{
         width: 100%;
         height: 120%;
         background: #000000;
-        border-left: 2px solid rgb(25, 144, 35);
+        border-left: 2px solid rgb(112, 108, 108);
         left: 0;
         animation: typing 5s steps(23) infinite;   
     }
@@ -113,7 +113,7 @@ body{
     padding: 20px 50px 20px 50px;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.526);
     background-color: rgb(15, 15, 15);
 }
 
@@ -141,7 +141,6 @@ body{
         width: 165px;
         background-color: rgb(15, 15, 15);
         display: flex;
-        border: 1px solid rgb(55, 53, 53);
         border-radius: 5px;
         margin-bottom: 20px;
         
@@ -149,7 +148,7 @@ body{
     .btn-skill:hover{
         opacity: .8;
         background-color: rgb(42, 40, 40);
-        box-shadow: 5px 0 25px #00ff77a1, -5px 0 25px #3700ff9d; 
+        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.744);
     }
     .btn-skill span {
         margin-top: 13px;
@@ -218,9 +217,6 @@ body{
         }
         .animation::before{
             content: '> ';
-        }
-        .main{
-
         }
 
     .about-me{
