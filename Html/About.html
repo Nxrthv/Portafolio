@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link rel="stylesheet" href="About.css">
+    <link rel="stylesheet" href="/Css/About.css">
+    <link rel="stylesheet" href="/Css/Loading.css">
     <title>About Me</title>
 </head>
 <div id="nav"></div>
+<div class="content_loader">
+    <div class="loader">
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+    </div>
+</div>
 <body>
     <div class="content">
         <div class="cont-text">
@@ -64,6 +76,7 @@
         <a class="tool" href=""></a>
     </div>
 </body>
+<script src="/JavaScript/Loading.js"></script>
 <script>
     fetch('Nav.html')
         .then(response => response.text())

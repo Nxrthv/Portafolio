@@ -3,10 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="Index.css">
+    <link rel="stylesheet" href="/Css/Index.css">
+    <link rel="stylesheet" href="/Css/Loading.css    ">
     <title>Nolberth Vargas - Full-Stack Web Developer</title>
 </head>
 <div id="nav"></div>
+<div class="content_loader">
+    <div class="loader">
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+        <div class="loader-square"></div>
+    </div>
+</div>
 <body>
     <section class="projects">
         <div class="card">
@@ -80,7 +92,12 @@
             </div>
         </div>
     </section>
+
 </body>
+<footer >
+
+</footer>
+<script src="/JavaScript/Loading.js"></script>
 <script>
     fetch('Nav.html')
         .then(response => response.text())

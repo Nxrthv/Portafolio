@@ -6,10 +6,6 @@ body{
     background-color: black;
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-
 .projects{
     margin: 50px auto auto auto;
 }

@@ -7,10 +7,6 @@ body{
     background-color: black;
 }
 
-::-webkit-scrollbar{
-    display: none;
-}
-
 .content{
     color: white;
     font-family: 'Exo 2', sans-serif;
@@ -19,7 +15,7 @@ body{
     margin-top: 5%;
 }
     .cont-text{
-        background-image: linear-gradient(to right, rgb(21, 20, 20), #f3f3f3);
+        background: linear-gradient(to right, rgb(21, 20, 20), #f3f3f3);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
