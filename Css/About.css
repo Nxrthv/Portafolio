@@ -15,12 +15,13 @@ body{
     margin-top: 5%;
 }
     .cont-text{
-        background: linear-gradient(to right, rgb(21, 20, 20), #f3f3f3);
+        background: linear-gradient(to right, rgb(184, 176, 176), #f3f3f3);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
         padding: 70px;
         margin-left: -70px;
+        margin-top: -15px;
     }
     .sub-text{
         margin-bottom: -20px;
@@ -36,7 +37,7 @@ body{
 
     }
     .welcome{
-        background: linear-gradient(to right, rgb(49, 48, 48), #f3f3f3);
+        background: linear-gradient(to right, rgb(128, 123, 123), #f3f3f3);
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
@@ -66,7 +67,7 @@ body{
         animation: slide 20s steps(4) infinite;
     }
     .option span{
-        background: linear-gradient(to right, rgb(46, 45, 45), #f3f3f3);
+        background: linear-gradient(to right, rgb(107, 104, 104), #f3f3f3);
         -webkit-background-clip: text;
          color: transparent;  
     }
@@ -99,13 +100,24 @@ body{
         }
     }
 
+.title-about{
+    color: white;
+    text-align: start;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    margin: auto auto 30px 22%;
+}
+
+.title-about:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+
 .about-me{
-    font-family: 'Dela Gothic One', cursive;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Overpass', sans-serif;
+    font-family: 'Exo 2', sans-serif;
     color: white;
     width: 600px;
-    margin: 80px auto 60px auto;
+    margin: auto auto 60px auto;
     padding: 20px 50px 20px 50px;
     text-align: center;
     border-radius: 10px;
@@ -118,8 +130,7 @@ body{
     text-align: start;
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    width: 55%;
-    margin: auto auto 20px auto;
+    margin: 0px auto 20px 22%;
 }
     .title-skills:hover{
         text-decoration: underline;
@@ -132,6 +143,7 @@ body{
         width: 750px;
         margin: auto;
         justify-content: space-between;
+        padding-bottom: 4%;
     }
     .btn-skill{
         width: 165px;
@@ -214,11 +226,4 @@ body{
         .animation::before{
             content: '> ';
         }
-
-    .about-me{
-        font-size: 13px;
-        padding: 10px 20px 10px 20px;
-        width: 320px;
-        margin: 50px auto 50px auto;
-    }
 }
