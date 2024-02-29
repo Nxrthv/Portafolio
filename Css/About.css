@@ -3,58 +3,82 @@
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inconsolata&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inconsolata&family=Overpass:wght@200&display=swap');
 
-body{
+.body{
     background-color: black;
 }
 
-.content{
+#content{
     color: white;
     font-family: 'Exo 2', sans-serif;
-    display: flex;
-    justify-content: center;
-    margin-top: 5%;
+    margin-top: 150px;
+    justify-content: space-between;
 }
-    .cont-text{
-        background: linear-gradient(to right, rgb(184, 176, 176), #f3f3f3);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        padding: 70px;
-        margin-left: -70px;
-        margin-top: -15px;
-    }
-    .sub-text{
-        margin-bottom: -20px;
-    }
-    .title{
-        margin-bottom: -10px;
-    }
-    .perfil{
-        width: 280px;
-        height: 280px;
-        border-radius: 50%;
-        box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.744);
+.cont-text{
+    background: linear-gradient(to right, rgb(184, 176, 176), #f3f3f3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    text-align: right;
+}
+.sub-text{
+    margin-bottom: 0px;
+    text-align: center;
+}
+.title{
+    margin-bottom: 20px;
 
-    }
-    .welcome{
-        background: linear-gradient(to right, rgb(128, 123, 123), #f3f3f3);
-        background-clip: text;
-        -webkit-background-clip: text;
-        color: transparent;
-        position: absolute;
-        margin-top: 185px;
-        margin-left: -400px;
-    }
-    .welcome a{
+}
+#perfil{
+    margin-left: 50px;
+    max-width: 280px;
+    max-height: 280px;
+    border-radius: 50%;
+    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.744);
+}
+.welcome{
+    position: absolute;
+    background: linear-gradient(to right, rgb(128, 123, 123), #f3f3f3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    margin: 70px auto auto 110px;
+    text-align: left;
+    min-width: 180px;
+}
+.welcome a{
+    text-decoration: none;
+}
+#redes{
+    position: absolute;
+    display: flex;
+    margin-left: 15em;
+    margin-top: 11em;
+}
+    #redes a{
+        margin: 5px;
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         text-decoration: none;
+        transition: .5s;
+        color: rgba(255, 255, 255, 0.512);
+        font-size: 2.5em;
+        -webkit-box-reflect: below 5px linear-gradient(to 
+        bottom, rgba(0,0,0,0.0), rgba(0, 0, 0, 0.168));
+    }
+    #redes a:hover{
+        color: #ffffff;
     }
 .main{
     margin-top: -40px;
-    margin-left: -50px;
     display: flex;
+    position: absolute;
+    margin-left: 140px;
+    text-align: right;
 }
     .main .option{
-        margin-left: 15px;
         height: 90px;
         line-height: 90px;
         overflow: hidden;
@@ -62,8 +86,6 @@ body{
     .option li{
         list-style: none;
         font-size: 20px;
-        position: relative;
-        top: 0;
         animation: slide 20s steps(4) infinite;
     }
     .option span{
@@ -105,7 +127,7 @@ body{
     text-align: start;
     font-size: 18px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    margin: auto auto 30px 22%;
+    margin: 40px auto 30px 22%;
 }
 
 .title-about:hover{
@@ -116,7 +138,7 @@ body{
 .about-me{
     font-family: 'Exo 2', sans-serif;
     color: white;
-    width: 600px;
+    width: 650px;
     margin: auto auto 60px auto;
     padding: 20px 50px 20px 50px;
     text-align: center;
@@ -194,31 +216,65 @@ body{
         margin-left: 4px;
     }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .content{
-        margin-top: 50px;
-        margin-left: -50px;
         color: white;
         font-family: 'Exo 2', sans-serif;
         display: flex;
     }
-        .cont-text{
-            margin-top: -70px;
-            margin-left: 10px;
-        }
         .title{
+            width: 200px;
+            margin-left: 20px;
             font-size: 25px;
+        }
+        .sub-text{
+            width: 150px;
+            margin-left: 20px;
         }
         .perfil{
             width: 150px;
             height: 150px;
-            margin-right: 20px;
         }
-
+        .main{
+            margin-left: 0px;
+        }
         .welcome{
             font-size: 15px;
-            margin-top: 120px;
-            margin-left: -115px;
+        }
+        .welcome a{
+            text-decoration: none;
+        }
+        .animation::before{
+            content: '> ';
+        }
+}
+
+@media screen and (max-width: 992px) {
+    .content{
+        color: white;
+        font-family: 'Exo 2', sans-serif;
+        display: flex;
+    }
+        .title{
+            margin-right: 110px;
+            font-size: 25px;
+        }
+        .sub-text{
+            margin-right:150px;
+        }
+        .perfil{
+            width: 150px;
+            height: 150px;
+        }
+        #redes{
+            margin-left: 2em;
+            margin-top: 10em;
+        }
+        .main{
+            margin-left: -70px;
+        }
+        .welcome{
+            font-size: 15px;
         }
         .welcome a{
             text-decoration: none;
