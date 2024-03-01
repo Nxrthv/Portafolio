@@ -18,6 +18,7 @@ body{
     justify-content: space-between;
     position: fixed;
     top: 0;
+    background-color: rgba(0, 0, 0, 0.829);
     z-index: 1000;
     width: 100%;
 }
