@@ -6,14 +6,9 @@
     display: none;
 }
 
-body{
-    padding: 0;
-    margin: 0;
-}
-
 .nav{
     font-family: 'Exo 2', sans-serif;
-    padding: 30px;
+    padding: 25px;
     display: flex;
     justify-content: space-between;
     position: fixed;
@@ -45,8 +40,8 @@ body{
 
 .content-nav a{
     color: white;
+    padding: 8px;
     text-decoration: none;
-    margin: auto 20px auto 20px;
     padding-bottom: 4px;
 }
 
@@ -59,19 +54,5 @@ body{
 
 .content-nav{
     display: flex;
-    justify-content: space-between;
-}
-
-@media screen and (max-width: 768px) {
-    .nav{
-        font-size: 12px;
-        margin: 20px;
-    }
-    .content-nav a{
-        margin: auto 8px auto 8px;
-    }
-    .pr{
-        font-size: 12px;
-    }
-        
+    justify-content: space-between;      
 }
