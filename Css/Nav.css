@@ -19,6 +19,7 @@
 }
 
 .pr a{
+    padding: auto 30px auto 30px;
     color: white;
     text-decoration: none;
     font-family: 'Dela Gothic One', cursive;
@@ -40,7 +41,7 @@
 
 .content-nav a{
     color: white;
-    padding: 8px;
+    padding: 20px;
     text-decoration: none;
     padding-bottom: 4px;
 }

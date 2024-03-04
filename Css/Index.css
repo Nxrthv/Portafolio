@@ -5,21 +5,24 @@
 #body{
     background-color: black;
 }
+.container{
+    margin-top: 7em;
+}
 #card {
-    margin-top: 2em;
     background: linear-gradient(#6c6c6ca1, #e3e2e29d);
     transition: all .4s;
     border-radius: 5px;
-    max-height: 38em;
+    max-height: 36em;
 }
 #img-project{
-    margin:  auto;
+    height: 25em;
+    margin: auto;
     transition: .4s ease;
     border-radius: 5px;
     display: flex;
-    padding: 2em;
 }
 #text-content{
+    margin-top: -2.5em;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     display: flex;
@@ -27,14 +30,15 @@
     align-items: start;
     margin-left: 30px;
     font-weight: 900;
+    margin-bottom: -1em;
 }
-#subtitle{
-    margin-bottom: -3em;
+#subtitle{ 
     color: rgba(201, 201, 201, 0.576);
 }
 #bgimg{
-    margin-top: -57%;
+    margin-top: -54.2%;
     max-width: 100%;
+    height: 36em;
     transition: .4s ease;
 }
 #bgimg:hover{
@@ -42,9 +46,31 @@
     transition: .4s ease;
 }
 
+@media screen and (max-width: 768px) {
+    #bgimg{
+        margin-bottom: -4.9em;
+        min-height: 20em;
+        height: auto;
+        width: 100%;
+    }
+    #card{
+        max-height: 20em;
+    }
+    #img-project{
+        height: auto;
+    }
+}
+
 @media screen and (max-width: 992px) {
     #bgimg{
-        margin-top: -24.2em;
-        height: 17.2em;
+        margin-top: -26.7em;
+        max-height: 25em;
+        width: 100%;
+    }
+    #card{
+        height: 25em;
+    }
+    #img-project{
+        height: auto;
     }
 }
