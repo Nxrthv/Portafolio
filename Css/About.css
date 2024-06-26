@@ -32,10 +32,11 @@
 .sub-text{
     margin-bottom: 0px;
     text-align: center;
-    margin-left: 70px;
+    margin-left: 50px;
 }
 .title{
-    margin-bottom: 20px;
+    margin-bottom: .5em;
+    margin-right: 40px;
 }
 #perfil{
     margin-left: 50px;
@@ -49,9 +50,9 @@
     background: linear-gradient(to right, var(--g), var(--w));
     background-clip: text;
     -webkit-background-clip: text;
-    margin: 70px auto auto 110px;
+    margin: 70px auto auto 120px;
     text-align: left;
-    min-width: 180px;
+    min-width: 250px;
 }
 .welcome a{
     text-decoration: none;
@@ -84,7 +85,7 @@
     margin-top: -40px;
     display: flex;
     position: absolute;
-    margin-left: 140px;
+    margin-left: 130px;
     text-align: right;
 }
 .main .option{
