@@ -2,66 +2,77 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
 
-#body{
-    background-color: black;
-}
-.container{
-    margin-top: 7em;
-}
-#card {
-    background: linear-gradient(#6c6c6ca1, #e3e2e29d);
-    transition: all .4s;
-    border-radius: 5px;
-    max-height: 36em;
-}
-#img-project{
-    height: 25em;
-    margin: auto;
-    transition: .4s ease;
-    border-radius: 5px;
-    display: flex;
-}
-#text-content{
-    margin-top: -2.5em;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    margin-left: 30px;
-    font-weight: 900;
-    margin-bottom: -1em;
-}
-#subtitle{ 
-    color: rgba(201, 201, 201, 0.576);
-}
-#bgimg{
-    margin-top: -54.2%;
-    max-width: 100%;
-    height: 36em;
-    transition: .4s ease;
-}
-#bgimg:hover{
-    opacity: 0;
-    transition: .4s ease;
-}
-
-@media screen and (max-width: 768px) {
-    #bgimg{
-        margin-bottom: -4.9em;
-        min-height: 20em;
-        height: auto;
-        width: 100%;
+@media screen and (max-width: 1440px){
+    #body{
+        background-color: black;
     }
-    #card{
-        max-height: 20em;
+    .container{
+        margin-top: 7em;
+    }
+    #card {
+        background: linear-gradient(#6c6c6ca1, #e3e2e29d);
+        transition: all .4s;
+        border-radius: .5em;
+        height: 38em;
+        max-width: 90%;
+        margin-inline: auto;
     }
     #img-project{
-        height: auto;
+        height: 27em;
+        margin: auto;
+        transition: .4s ease;
+        border-radius: .5em;
+        display: flex;
+    }
+    #text-content{
+        margin-top: -2.5em;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        margin-left: 30px;
+        font-weight: 900;
+        margin-bottom: -1em;
+    }
+    #subtitle{ 
+        color: rgba(201, 201, 201, 0.576);
+    }
+    #bgimg{
+        margin-inline: 4.09em;
+        border-radius: .5em;
+        position: relative;
+        max-width: 90%;
+        height: 38em;
+        position: relative;
+        bottom: 38em;
+        transition: .4s ease;
+    }
+    #bgimg:hover{
+        opacity: 0;
+        transition: .4s ease;
     }
 }
 
-@media screen and (max-width: 992px) {
+@media screen and (width: 768px) {
+    #bgimg{
+        position: relative;
+        bottom: 25em;
+        margin-inline: 1.09em;
+        max-width: 95%;
+        max-height: 25em;
+    }
+    #card{
+        margin: auto;
+        max-height: 25em;
+        max-width: 95%;
+    }
+    #img-project{
+        max-height: 15em;
+    }
+}
+
+@media screen and (width: 390px) {
     #bgimg{
         margin-top: -26.7em;
         max-height: 25em;

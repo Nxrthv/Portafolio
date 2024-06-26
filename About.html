@@ -23,40 +23,20 @@
 </div>
 <body class="body">
     <div class="container" id="content">
-        <!-- <div class="row">
-            <div class="col border">1</div>
-            <div class="col border">2</div>
-            <div class="col border">3</div>
-            <div class="col border">4</div>
-            <div class="col border">5</div>
-            <div class="col border">6</div>
-            <div class="col border">7</div>
-            <div class="col border">8</div>
-            <div class="col border">9</div>
-            <div class="col border">10</div>
-            <div class="col border">11</div>
-            <div class="col border">12</div>
-        </div> -->
         <div class="row">
             <div class="col-6 col-md-6">
                 <div class="cont-text">
                     <p class="sub-text">Hello World, I'm</p>
-                    <h1 class="title">Andres Vargas</h1>
-                    <div class="main">
-                        <ul class="option">
-                            <li><span>I'm Student...</span></li>
-                            <li><span>Web Developer...</span></li>
-                            <li><span>Full-Stack Developer...</span></li>
-                            <li><span>Software Engineer...</span></li>
-                        </ul>
-                        <p class="welcome">Welcome to My personal <br> website. <a href="">👋🏼</a></p>
-                    </div>
+                    <h1 class="title">Andres Vargas</h1>            
+                    <p class="welcome">Welcome to My personal <br> website. <a href="">👋🏼</a></p>
+                    <div id="animation" ></div>
+                    
                 </div>
             </div>
             <div class="col-6 col-md-6">
                 <img id="perfil" src="/Imgs/perfil.jfif" alt="">
             </div>
-            <div class="col-6 col-md-6" id="redes">
+            <div class="col-6 col-md-6 p-3" id="redes">
                 <a href="#"><i class="fa-brands fa-facebook"></i></a>
                 <a href=""><i class="fa-brands fa-whatsapp"></i></a>
                 <a href=""><i class="fa-brands fa-instagram"></i></a>
@@ -105,6 +85,7 @@
     </div>
 </body>
 <script src="/JavaScript/Loading.js"></script>
+<script src="/JavaScript/AnimationTypewriter.js"></script>
 <script>
     fetch('Nav.html')
         .then(response => response.text())

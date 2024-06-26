@@ -1,28 +1,19 @@
-const palabras = ["Software Engineer", "Web Developer", "Front Developer"];
+const palabras = ["I'm Student...","Software Engineer...", "Web Developer...", "Front Developer..."];
 const MaquinaDeEscribir = document.getElementById("animation");
-
-function escribirPalabra(palabra){
-    let index = 0;
-    const intervalId = setInterval(()=>{
-        MaquinaDeEscribir.textContent = palabra.
-        slice(0,index);
-        index++
-        if (index > palabra.length){
-            clearInterval(intervalId);
-            setTimeout(()=>{
-                MaquinaDeEscribir.textContent =
-                "";
-                escribirSiguientePalabra();
-            }, 1000)
-        }
-    }, 150)
-}
-
 let indicePalabraActual = 0;
-function escribirSiguientePalabra(){
-    const indicePalabra = palabras[indicePalabraActual];
-    indicePalabraActual = (indicePalabraActual + 1) % palabras.length;
-    escribirPalabra(indicePalabra)
+let index = 0;
+let intervalId;
+function escribirPalabra() {
+    MaquinaDeEscribir.innerHTML = palabras[indicePalabraActual].slice(0, index) + '<span class="cursor"></span>';
+    index++
+    if (index > palabras[indicePalabraActual].length) {
+        clearInterval(intervalId);
+        setTimeout(() => {
+            MaquinaDeEscribir.innerHTML = "";
+            indicePalabraActual = (indicePalabraActual + 1) % palabras.length;
+            index = 0;
+            intervalId = setInterval(escribirPalabra, 150);
+        }, 1000);
+    }
 }
-
-escribirSiguientePalabra();
+intervalId = setInterval(escribirPalabra, 150);
