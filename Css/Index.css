@@ -72,7 +72,9 @@
 .block{
     display: block;
 }
-
+.inline-block{
+  display: inline-block;
+}
 /* Margin */
 .mr-0{
     margin: 0%;
@@ -85,7 +87,7 @@
     margin-top: -16.1em;
     width: 100%;
     height: 58em;
-    background: linear-gradient(90deg, rgba(12, 13, 15, 0.481) 20%, #0f0e0e 55%);
+    background: linear-gradient(90deg, rgba(12, 13, 15, 0) 0%, #0f0e0e 40%);
     z-index: -1;
 }
 body{
@@ -125,10 +127,17 @@ body{
     margin-top: -13.1em;
 }
 #block2>img{
-    width: 54%;
+    width: 40%;
+    height: 38em;
     position: relative;
     z-index: -2;
     max-height: max-content;
+}
+#block2>div{
+  margin-inline: auto;
+  width: 35%;
+  color: white;
+  margin-top: 16em;
 }
 #block3>#title{
   width: 100%;
@@ -279,7 +288,9 @@ margin-top: -1em;
     }
 
 }
-
+.arrow{
+  animation: arrow 1s linear infinite;
+}
 @keyframes arrowX{
   0%{
     transform: translateX(.3em);
@@ -292,7 +303,6 @@ margin-top: -1em;
   }
 
 }
-
 @keyframes translateY {
     0%{
         transform: translateY(2em);
