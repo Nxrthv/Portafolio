@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animación Estilo Galaga</title>
+    <style>
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-area {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    border: 2px solid white;
+    overflow: hidden;
+    background-color: black;
+    background-size: cover;
+}
+
+.enemy {
+    position: absolute;
+    width: 60px;
+    height: 50px;
+    background-image: url('');
+    background-size: cover;
+    top: 10px;
+    animation: moveEnemy 10s linear infinite;
+}
+
+@keyframes moveEnemy {
+    0%, 100% { left: 0; }
+    50% { left: calc(100% - 50px); }
+}
+
+.bullet {
+    position: absolute;
+    width: 5px;
+    height: 15px;
+    background-color: #ffffff;
+}
+
+    </style>
+</head>
+<body>
+    <div class="game-area">
+        <div class="enemy" style="left: 10%;"></div>
+        <div class="enemy" style="left: 20%;"></div>
+        <div class="enemy" style="left: 40%;"></div>
+        <div class="enemy" style="left: 55%;"></div>
+        <div class="enemy" style="left: 70%;"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    const gameArea = document.querySelector('.game-area');
+    const enemies = document.querySelectorAll('.enemy');
+
+    function shootBullet(enemy) {
+        const bullet = document.createElement('div');
+        bullet.className = 'bullet';
+        bullet.style.left = enemy.offsetLeft + (enemy.offsetWidth / 2 - 2.5) + 'px';
+        bullet.style.top = enemy.offsetTop + enemy.offsetHeight + 'px';
+        gameArea.appendChild(bullet);
+
+        const bulletInterval = setInterval(function() {
+            bullet.style.top = bullet.offsetTop + 5 + 'px';
+            if (bullet.offsetTop > gameArea.offsetHeight) {
+                clearInterval(bulletInterval);
+                bullet.remove();
+            }
+        }, 50);
+    }
+
+    function startShooting() {
+        enemies.forEach(enemy => {
+            setInterval(() => {
+                shootBullet(enemy);
+            }, 2000);
+        });
+    }
+
+    startShooting();
+});
+</script>
+</html>
