@@ -1,94 +1,35 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Animación Estilo Galaga</title>
+    <title>Document</title>
     <style>
-        body, html {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.game-area {
-    position: relative;
-    width: 800px;
-    height: 600px;
-    border: 2px solid white;
-    overflow: hidden;
-    background-color: black;
-    background-size: cover;
-}
-
-.enemy {
-    position: absolute;
-    width: 60px;
-    height: 50px;
-    background-image: url('');
-    background-size: cover;
-    top: 10px;
-    animation: moveEnemy 10s linear infinite;
-}
-
-@keyframes moveEnemy {
-    0%, 100% { left: 0; }
-    50% { left: calc(100% - 50px); }
-}
-
-.bullet {
-    position: absolute;
-    width: 5px;
-    height: 15px;
-    background-color: #ffffff;
-}
+        .bgperfil{
+            height: 10em;
+            width: 100%;
+        }
+        .img-bg{
+            background-image: url('https://i.gifer.com/2FxB.gif');
+            background-size: cover;
+            width: 8em;
+            height: 9em;
+            margin-inline: auto;
+        }
 
     </style>
 </head>
-<body>
-    <div class="game-area">
-        <div class="enemy" style="left: 10%;"></div>
-        <div class="enemy" style="left: 20%;"></div>
-        <div class="enemy" style="left: 40%;"></div>
-        <div class="enemy" style="left: 55%;"></div>
-        <div class="enemy" style="left: 70%;"></div>
+<body style="margin: 0;">
+    <div id="encabezado">
+        <div class="bgperfil" style="background-color: black;">
+            <div class="img-bg"></div>
+        </div>
+        <div style="border-top: 1px solid white;">
+            <img src="Imgs/perfil.jfif" style="height: 12em; border-radius: 50%;margin-left: 3em;margin-top: -4em;border: 2px solid white;" alt="">
+        </div>
+        <div>
+            <h1 style="font-size: 1.2em;margin-left: 3.5em;width: 8em;text-align: center;padding-bottom: 1em;">@andres vargas esquivel</h1>
+        </div>
     </div>
-    <script src="script.js"></script>
 </body>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    const gameArea = document.querySelector('.game-area');
-    const enemies = document.querySelectorAll('.enemy');
-
-    function shootBullet(enemy) {
-        const bullet = document.createElement('div');
-        bullet.className = 'bullet';
-        bullet.style.left = enemy.offsetLeft + (enemy.offsetWidth / 2 - 2.5) + 'px';
-        bullet.style.top = enemy.offsetTop + enemy.offsetHeight + 'px';
-        gameArea.appendChild(bullet);
-
-        const bulletInterval = setInterval(function() {
-            bullet.style.top = bullet.offsetTop + 5 + 'px';
-            if (bullet.offsetTop > gameArea.offsetHeight) {
-                clearInterval(bulletInterval);
-                bullet.remove();
-            }
-        }, 50);
-    }
-
-    function startShooting() {
-        enemies.forEach(enemy => {
-            setInterval(() => {
-                shootBullet(enemy);
-            }, 2000);
-        });
-    }
-
-    startShooting();
-});
-</script>
 </html>
