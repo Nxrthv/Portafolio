@@ -1,87 +1,299 @@
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&display=swap');
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=Inconsolata&family=Overpass:wght@200&family=Pixelify+Sans&display=swap');
 
-@media screen and (max-width: 1440px){
-    #body{
-        background-color: black;
-    }
-    .container{
-        margin-top: 7em;
-    }
-    #card {
-        background: linear-gradient(#6c6c6ca1, #e3e2e29d);
-        transition: all .4s;
-        border-radius: .5em;
-        height: 38em;
-        max-width: 90%;
-        margin-inline: auto;
-    }
-    #img-project{
-        height: 27em;
-        margin: auto;
-        transition: .4s ease;
-        border-radius: .5em;
-        display: flex;
-    }
-    #text-content{
-        margin-top: -2.5em;
-        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        margin-left: 30px;
-        font-weight: 900;
-        margin-bottom: -1em;
-    }
-    #subtitle{ 
-        color: rgba(201, 201, 201, 0.576);
-    }
-    #bgimg{
-        margin-inline: 4.09em;
-        border-radius: .5em;
-        position: relative;
-        max-width: 90%;
-        height: 38em;
-        position: relative;
-        bottom: 38em;
-        transition: .4s ease;
-    }
-    #bgimg:hover{
-        opacity: 0;
-        transition: .4s ease;
-    }
+.text-bold {
+    font-family: "Tilt Warp", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-variation-settings:
+      "XROT" 0,
+      "YROT" 0;
 }
 
-@media screen and (width: 768px) {
-    #bgimg{
-        position: relative;
-        bottom: 25em;
-        margin-inline: 1.09em;
-        max-width: 95%;
-        max-height: 25em;
-    }
-    #card{
-        margin: auto;
-        max-height: 25em;
-        max-width: 95%;
-    }
-    #img-project{
-        max-height: 15em;
-    }
+.text-game{
+    font-family: 'Dela Gothic One', cursive;
+    font-family: 'Inconsolata', monospace;
+    font-family: 'Overpass', sans-serif;
+    font-family: 'Pixelify Sans', cursive;
+
 }
 
-@media screen and (width: 390px) {
-    #bgimg{
-        margin-top: -26.7em;
-        max-height: 25em;
-        width: 100%;
+/* Bg Colors */
+.bg-black{
+    background-color: #0b0b0b;
+}
+
+/* Colors */
+.white{
+    color: white;
+}
+.black{
+    color: black;
+}
+/* Texts Styles */
+.text-with-border {
+    font-size: 40px;
+    color: black;
+    text-shadow:
+      1px 1px 0px #ffffff,
+      -1px -1px 0px #ffffff,
+      -1px 1px 0px #ffffff,
+      1px -1px 0px #ffffff,
+      1px 0px 0px #ffffff,
+      0px 1px 0px #ffffff,
+      -1px 0px 0px #ffffff,
+      0px -1px 0px #ffffff;
+  }
+  decoration-none{
+    text-decoration: none;
+  }
+/* Positions */
+.items-center{
+    align-items: center;
+}
+.text-center{
+    text-align: center;
+}
+
+/* Display */
+.flex{
+    display: flex;
+}
+.block{
+    display: block;
+}
+
+/* Margin */
+.mr-0{
+    margin: 0%;
+}
+
+/* Objects */
+.mascara{
+    position: absolute;
+    left: 0;
+    margin-top: -16.1em;
+    width: 100%;
+    height: 58em;
+    background: linear-gradient(90deg, rgba(12, 13, 15, 0.481) 20%, #0f0e0e 55%);
+    z-index: -1;
+}
+body{
+    margin: 0%;
+    background-color: #0f0e0e;
+}
+#block1{
+    padding-top: 12em;
+    height: 24em;
+}
+#block1>p{
+    font-size: 2em;
+}
+#block1>h1>a{
+    font-size: 1.8em;
+    color: #0b0b0b;
+    text-decoration: none;
+}
+#block1>div>i{
+    font-size: 2.5em;
+    margin-inline: .5em;
+    margin-top: .5em;
+    cursor: pointer;
+}
+#block1>div>i:hover{
+    font-size: 2.8em;
+    transition: .2s ease;
+    margin-inline: .41em;
+    margin-top: auto;
+}
+#block1>i{
+    padding-top: 1em;
+    font-size: 2em;
+    animation: arrow 1s infinite;
+}
+#block2{
+    margin-top: -13.1em;
+}
+#block2>img{
+    width: 54%;
+    position: relative;
+    z-index: -2;
+    max-height: max-content;
+}
+#block3{
+    margin-top: 5em;
+    display: flex;
+    width: 90%;
+    margin-inline: auto;
+    flex-wrap: wrap;
+}
+
+.card {
+    width: 30em;
+    border-radius: 20px;
+    background: #2c2a2a;
+    padding: 5px;
+    overflow: hidden;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    margin-inline: auto;
+    margin-bottom: 4em;
+    justify-content: space-between;
+    transition: transform 0.5s, opacity 0.5s;
+    opacity: 0;
+  }
+  .card.visible {
+    transform: translateY(0);
+    animation: translateY 1s;
+    opacity: 1;
+}
+  .card .top-section {
+    border-radius: 15px;
+    height: 2em;
+    display: flex;
+    flex-direction: column;
+    background-color: #0f0e0e;
+    position: relative;
+  }
+  .card img{
+    width: 100%;
+    margin-top: -.8em;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em ;
+  }
+  .card .top-section .border {
+    border-bottom-right-radius: 10px;
+    height: 30px;
+    width: 20em;
+    background: white;
+    background: #2c2a2a;
+    position: relative;
+    transform: skew(-40deg);
+    box-shadow: -10px -10px 0 0 #2c2a2a;
+  }
+  .card .top-section .border::before {
+    content: "";
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    top: 0;
+    right: -15px;
+    background: rgba(255, 255, 255, 0);
+    border-top-left-radius: 10px;
+    box-shadow: -5px -5px 0 2px #2c2a2a;
+  }
+  .card .top-section::before {
+    content: "";
+    position: absolute;
+    top: 30px;
+    left: 0;
+    background: rgba(255, 255, 255, 0);
+    height: 15px;
+    width: 15px;
+    border-top-left-radius: 15px;
+    box-shadow: -5px -5px 0 2px #2c2a2a;
+  }
+  .card .top-section .icons {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+  }
+  .card .top-section .icons .logo {
+    height: 120%;
+    aspect-ratio: 1;
+    padding: 7px 0 10px 15px;
+  }
+  .card .top-section .icons .social-media {
+    height: 100%;
+    padding: 8px 20px;
+    display: flex;
+    gap: 20px;
+    font-size: 1.5em;
+  }
+  .card .top-section .icons .social-media i:hover{
+    font-size: 1.2em;
+    transition: .4s ease;
+    cursor: pointer;
+  }
+  .card .bottom-section {
+    margin-top: 10px;
+    padding: 10px 5px;
+  }
+  .card .bottom-section .title {
+    display: block;
+    font-size: 17px;
+    font-weight: bolder;
+    color: white;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .card .bottom-section .row {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  .card .bottom-section .row .item {
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    color: rgba(255, 255, 255, 0.721);
+  }
+  .card .bottom-section .row .redirection{
+    animation: arrowX 1s infinite;
+    flex: 30%;
+    text-align: center;
+    padding: 5px;
+    
+    text-decoration: none;
+  }
+  .card .bottom-section .row .redirection a{
+    color: rgba(255, 255, 255, 0.721);
+  }
+  .card .bottom-section .row .item .big-text {
+    font-size: 12px;
+    display: block;
+  }
+  .card .bottom-section .row .item .regular-text {
+    font-size: 9px;
+  }
+  .card .bottom-section .row .item:nth-child(2) {
+    border-left: 1px solid rgba(255, 255, 255, 0.126);
+    border-right: 1px solid rgba(255, 255, 255, 0.126);
+  }
+
+/* Animations */
+@keyframes arrow{
+    0%{
+        transform: translateY(.3em);
+        transition: .5s ease-in-out;
     }
-    #card{
-        height: 25em;
+    100%{
+        transform: translateY(0em);
+        transition: .5s ease-in-out;
     }
-    #img-project{
-        height: auto;
+
+}
+
+@keyframes arrowX{
+  0%{
+    transform: translateX(.3em);
+    transition: .5s ease-in-out;
+  }
+  100%{
+    transform: translateX(0em);
+    transition: .5s ease-in-out;
+  }
+
+}
+
+@keyframes translateY {
+    0%{
+        transform: translateY(2em);
+        transition: 1.5s ease;
     }
 }
