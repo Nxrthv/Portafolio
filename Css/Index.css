@@ -215,12 +215,14 @@ margin-top: -1em;
     opacity: 1;
 }
   .card .top-section {
-    border-top-right-radius: 1em;
-    height: 1.8em;
-    width: 100%;
+    border-top-right-radius: 5em;
+    border-top-left-radius: 10em;
+    height: 2em;
+    width: 40%;
+    left: 60%;
     display: flex;
     flex-direction: column;
-    background-color: #0f0e0ed2;
+    background-color: #0f0e0e7e;
     position: relative;
   }
   .card img{
@@ -228,16 +230,6 @@ margin-top: -1em;
     border-bottom-left-radius: 1em;
     border-bottom-right-radius: 1em;
     border-top-left-radius: 1em;
-  }
-  .card .top-section .border {
-    border-bottom-right-radius: 1em;
-    border-top-right-radius: 0;
-    height: 50px;
-    width: 20em;
-    background: #2c2a2a;
-    position: relative;
-    transform: skew(-40deg);
-    box-shadow: -10px -10px 0 0 #2c2a2a;
   }
   .card .top-section .icons {
     position: absolute;
@@ -247,9 +239,14 @@ margin-top: -1em;
     justify-content: space-between;
     color: white;
   }
-  .card .top-section .icons .logo {
-    height: 120%;
-    padding: 7px 0 10px 15px;
+  .card .top-section .icons .logo i{
+    padding: 9px 0 10px 20px;
+    transition: .2s ease;
+  }
+  .card .top-section .icons .logo i:hover {
+    font-size: 1.2em;
+    transition: .2s ease;
+    cursor: pointer;
   }
   .card .top-section .icons .social-media {
     height: 100%;
@@ -261,11 +258,6 @@ margin-top: -1em;
   .card .top-section .icons .social-media i{
     transition: .2s ease;
     font-size: 1em;
-  }
-  .card .top-section .icons .social-media i:hover{
-    font-size: 1.2em;
-    transition: .2s ease;
-    cursor: pointer;
   }
   .card .bottom-section {
     margin-top: 10px;

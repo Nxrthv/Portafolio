@@ -30,7 +30,7 @@
             margin-top: 15em;
             }
 
-            button span {
+        button span {
             position: relative;
             display: flex;
             justify-content: center;
@@ -44,17 +44,46 @@
             color: #fff;
             border: 0.08em solid #fff;
             box-shadow: 0 0.4em 0.1em 0.019em #fff;
-            }
+        }
 
-            button span:hover {
+        button span:hover {
             transition: all 0.5s;
             transform: translate(0, 0.4em);
             box-shadow: 0 0 0 0 #fff;
-            }
+        }
 
-            button span:not(hover) {
+        button span:not(hover) {
             transition: all 1s;
-            }
+        }
+        .loader {
+            width: 100%;
+            height: 3px;
+            border-radius: 2px;
+            background-color: rgba(0, 0, 0, 0.672);
+        }
+        .charge {
+            height: 3px;
+            border-radius: 2px;
+            margin-left: -100%;
+        }
+        .bar {
+            display: flex;
+            width: 60%;
+            align-items: center;
+        }
+        .container{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+            padding: 0%;
+            margin: 0%;
+            margin-left: -10em;
+        }
+        .container h1{
+            color: gray;
+            margin-right: 1em;
+            font-size: 1em;
+        }
     </style>
 </head>
 <body style="margin: 0; background-color:#0f0e0e;">
@@ -75,7 +104,31 @@
         <div>
             <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1.1em;margin-left: 2em;;color: white;margin-top: -4em;">@andresvargasesquivel</h1>
         </div>
-        
+    </div>
+    <div>
+        <div style="padding-top: 8em;">
+            <div class="container">
+                <h1>HTML</h1>
+                <div  class="bar">
+                    <div class="loader"></div>
+                    <div class="charge" style="width: 75%;box-shadow: rgb(188, 9, 9) 0px 2px 29px 0px;background-color: rgb(188, 9, 9);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>CSS</h1>
+                <div  class="bar">
+                    <div class="loader"></div>
+                    <div class="charge" style="width: 75%;box-shadow: rgb(9, 155, 188) 0px 2px 29px 0px;background-color: rgb(9, 155, 188);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>JS</h1>
+                <div  class="bar">
+                    <div class="loader"></div>
+                    <div class="charge" style="width: 50%;box-shadow: rgb(182, 188, 9) 0px 2px 29px 0px;background-color: rgb(182, 188, 9);"></div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 <script src="/JavaScript/Download.js"></script>
