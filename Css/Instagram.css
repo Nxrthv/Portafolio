@@ -8,15 +8,13 @@ body{
 }
 .info{
     display: flex;
+    align-items: center;
 }
 .photoperfil{
-    height: 10em;
+    height: 9em;
     margin-right: 6em;
-    border: 3px solid purple;
-    border: 3px solid #E1306C;
-    border-radius: 50%;
-    border-radius: 50%;
-}  
+    border-radius: 50%;border: 1px solid #8080803d;
+}
 .cont1{
     display: flex;
     align-items: center;
@@ -88,4 +86,68 @@ button:hover{
 }
 .website:hover{
     text-decoration: underline;
+}
+.cont-storys{
+    display: flex;
+    width: 50%;
+    margin-left: 12em;
+    margin-top: 3em;
+}
+.story>img{
+    height: 5em;
+    width: 5em;
+    border-radius: 50%;
+    border: 1px solid rgba(191, 191, 191, 0.635);
+}
+.story>p{
+    text-align: center;
+    margin-top: 2px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+.story{
+    margin-inline: 2em;
+}
+.story:hover{
+    cursor: pointer;
+}
+#sliderContainer {
+    min-width: 100%;
+    max-width: 100px;
+    height: 100%;
+    padding: 0px;
+    top: 0;
+    left: 0;
+    background: #000000c4;
+    position: absolute;
+}
+.slider {
+    display: flex;
+    overflow-x: auto;
+    -ms-overflow-style: none; /* Elimina la barra de desplazamiento en IE/Edge */
+    scrollbar-width: none; /* Elimina la barra de desplazamiento en Firefox */
+}
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start;
+    width: 100%;
+}
+.slide img {
+    width: 18em;
+    display: block;
+    margin-inline: auto;
+    margin-top: 2em;
+    margin-bottom: 1.9em;
+    box-shadow: 0px 0px 15px 15px rgba(0, 0, 0, 0.449);
+    border-radius: 1em;
+}
+#close {
+    background-color: #80808000;
+    border: none;
+    cursor: pointer;
+    left: 58%;
+    top: 1.5em;
+    position: absolute;
+    font-weight: bold;
+    color: white;
 }

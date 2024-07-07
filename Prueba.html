@@ -1,135 +1,124 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .bgperfil{
-            height: 10em;
-            width: 100%;
-        }
-        .img-bg{
-            background-image: url('https://i.gifer.com/2FxB.gif');
-            background-size: cover;
-            width: 8em;
-            height: 9em;
-            margin-inline: auto;
-        }
-        button {
-            padding: 0.1em 0.25em;
-            width: 13em;
-            height: 4.2em;
-            background-color: #212121;
-            border: 0.08em solid #fff;
-            border-radius: 0.3em;
-            font-size: 12px;
-            cursor: pointer;
-            position: absolute;
-            margin-left: 4em;
-            margin-top: 15em;
-            }
+<style>
+    /* Estilo básico para el contenedor del slider */
+#sliderContainer {
+    width: 100%;
+    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
+    margin: 20px auto; /* Centra el contenedor */
+    text-align: center; /* Centra el botón de cerrar */
+}
 
-        button span {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            bottom: 0.4em;
-            width: 8.25em;
-            height: 2.5em;
-            background-color: #212121;
-            border-radius: 0.2em;
-            font-size: 1.5em;
-            color: #fff;
-            border: 0.08em solid #fff;
-            box-shadow: 0 0.4em 0.1em 0.019em #fff;
-        }
+/* Estilo básico para el botón de cerrar */
+#cerrarSlider {
+    margin-top: 10px; /* Espacio superior */
+    padding: 5px 10px;
+    background-color: #ccc;
+    border: none;
+    cursor: pointer;
+}
 
-        button span:hover {
-            transition: all 0.5s;
-            transform: translate(0, 0.4em);
-            box-shadow: 0 0 0 0 #fff;
-        }
+/* Estilo para el slider */
+.slider {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory; /* Hace que el scroll sea en modo obligatorio */
+    -webkit-overflow-scrolling: touch; /* Mejora el scrolling en dispositivos iOS */
+    scroll-behavior: smooth; /* Scroll suave */
+    -ms-overflow-style: none; /* Elimina la barra de desplazamiento en IE/Edge */
+    scrollbar-width: none; /* Elimina la barra de desplazamiento en Firefox */
+}
 
-        button span:not(hover) {
-            transition: all 1s;
-        }
-        .loader {
-            width: 100%;
-            height: 3px;
-            border-radius: 2px;
-            background-color: rgba(0, 0, 0, 0.672);
-        }
-        .charge {
-            height: 3px;
-            border-radius: 2px;
-            margin-left: -100%;
-        }
-        .bar {
-            display: flex;
-            width: 60%;
-            align-items: center;
-        }
-        .container{
-            width: 50%;
-            display: flex;
-            justify-content: right;
-            padding: 0%;
-            margin: 0%;
-            margin-left: -10em;
-        }
-        .container h1{
-            color: gray;
-            margin-right: 1em;
-            font-size: 1em;
-        }
-    </style>
-</head>
-<body style="margin: 0; background-color:#0f0e0e;">
-    <div id="encabezado">
-        <div class="bgperfil" style="background-color: black;">
-            <div class="img-bg"></div>
-        </div>
-        <div style="border-top: 1px solid #414040; display: inline-flex;">
-            <img src="Imgs/perfil.jfif" style="height: 10em; border-radius: 50%;margin-left: 3em;margin-top: -4em;border: 2px solid #414040;" alt="">
-            <div style="background-color: #414040; color: white; border-radius: 1em;width: 75%;margin-left: 2em;padding: 1em; margin-top: 2em;">
-                <h1 style="padding-left: 1em;">About Me...</h1>
-                <p style="padding-inline: 2em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, modi! Omnis sequi provident harum quas voluptatibus qui aut adipisci? Fugit ratione numquam qui maxime tempora?</p>
-            </div>
-            <button id="downloadBtn">
-                <span>Currículum</span>
-              </button>              
-        </div>
-        <div>
-            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1.1em;margin-left: 2em;;color: white;margin-top: -4em;">@andresvargasesquivel</h1>
-        </div>
+.slide {
+    flex: 0 0 auto;
+    scroll-snap-align: start; /* Alinea cada imagen al inicio */
+    width: 100%;
+}
+
+.slide img {
+    width: 100%;
+    display: block;
+}
+
+</style>
+<button id="mostrarSlider">Mostrar Slider</button>
+
+<div id="sliderContainer" style="display: none;">
+    <button id="cerrarSlider">Cerrar</button>
+    <div id="slider" class="slider">
+        <div class="slide"><img src="imagen1.jpg" alt="Imagen 1"></div>
+        <div class="slide"><img src="imagen2.jpg" alt="Imagen 2"></div>
+        <div class="slide"><img src="imagen3.jpg" alt="Imagen 3"></div>
+        <!-- Agrega más imágenes según sea necesario -->
     </div>
-    <div>
-        <div style="padding-top: 8em;">
-            <div class="container">
-                <h1>HTML</h1>
-                <div  class="bar">
-                    <div class="loader"></div>
-                    <div class="charge" style="width: 75%;box-shadow: rgb(188, 9, 9) 0px 2px 29px 0px;background-color: rgb(188, 9, 9);"></div>
-                </div>
-            </div>
-            <div class="container">
-                <h1>CSS</h1>
-                <div  class="bar">
-                    <div class="loader"></div>
-                    <div class="charge" style="width: 75%;box-shadow: rgb(9, 155, 188) 0px 2px 29px 0px;background-color: rgb(9, 155, 188);"></div>
-                </div>
-            </div>
-            <div class="container">
-                <h1>JS</h1>
-                <div  class="bar">
-                    <div class="loader"></div>
-                    <div class="charge" style="width: 50%;box-shadow: rgb(182, 188, 9) 0px 2px 29px 0px;background-color: rgb(182, 188, 9);"></div>
-                </div>
-            </div>
-        </div>
-    </div>
-</body>
-<script src="/JavaScript/Download.js"></script>
-</html>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+    var mostrarSliderBtn = document.getElementById('mostrarSlider');
+    var sliderContainer = document.getElementById('sliderContainer');
+    var slider = document.getElementById('slider');
+    var cerrarSliderBtn = document.getElementById('cerrarSlider');
+    var intervaloTiempo = 5000; // Intervalo de cambio de imágenes en milisegundos (5 segundos)
+    var interval; // Variable para almacenar el intervalo
+
+    mostrarSliderBtn.addEventListener('click', function() {
+        // Mostrar el contenedor del slider
+        sliderContainer.style.display = 'block';
+
+        // Ajustar el tamaño del slider si es necesario
+        resizeSlider();
+
+        // Iniciar temporizador para cambiar las imágenes automáticamente
+        interval = setInterval(cambiarImagen, intervaloTiempo);
+
+        // Detener el temporizador cuando el mouse está sobre el slider para evitar cambios mientras el usuario interactúa
+        slider.addEventListener('mouseover', function() {
+            clearInterval(interval);
+        });
+
+        // Reanudar el temporizador cuando el mouse sale del slider
+        slider.addEventListener('mouseleave', function() {
+            interval = setInterval(cambiarImagen, intervaloTiempo);
+        });
+
+        // Opcional: Ajustar el tamaño del slider cuando se redimensiona la ventana
+        window.addEventListener('resize', resizeSlider);
+    });
+
+    cerrarSliderBtn.addEventListener('click', function() {
+        // Ocultar el contenedor del slider
+        sliderContainer.style.display = 'none';
+
+        // Detener el intervalo cuando se cierra el slider
+        clearInterval(interval);
+    });
+
+    function resizeSlider() {
+        // Calcula el ancho total de todas las imágenes en el slider
+        var totalWidth = 0;
+        var slides = document.querySelectorAll('.slide');
+        slides.forEach(function(slide) {
+            totalWidth += slide.offsetWidth;
+        });
+
+        // Establece el ancho del slider según el ancho total de las imágenes
+        slider.style.width = totalWidth + 'px';
+    }
+
+    function cambiarImagen() {
+        // Obtener todas las imágenes dentro del slider
+        var slides = document.querySelectorAll('.slide');
+
+        // Obtener la primera imagen visible
+        var primeraImagen = slides[0];
+
+        // Calcular el ancho de la primera imagen
+        var anchoImagen = primeraImagen.offsetWidth;
+
+        // Mover el primer slide al final
+        slider.appendChild(primeraImagen);
+
+        // Resetear la posición del slider para mostrar la nueva primera imagen
+        slider.scrollLeft += anchoImagen;
+    }
+});
+
+</script>

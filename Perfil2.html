@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .bgperfil{
+            height: 10em;
+            width: 100%;
+        }
+        .img-bg{
+            background-image: url('https://i.gifer.com/2FxB.gif');
+            background-size: cover;
+            width: 8em;
+            height: 9em;
+            margin-inline: auto;
+        }
+        button {
+            padding: 0.1em 0.25em;
+            width: 13em;
+            height: 4.2em;
+            background-color: #212121;
+            border: 0.08em solid #fff;
+            border-radius: 0.3em;
+            font-size: 12px;
+            cursor: pointer;
+            position: absolute;
+            margin-left: 4em;
+            margin-top: 15em;
+            }
+
+        button span {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            bottom: 0.4em;
+            width: 8.25em;
+            height: 2.5em;
+            background-color: #212121;
+            border-radius: 0.2em;
+            font-size: 1.5em;
+            color: #fff;
+            border: 0.08em solid #fff;
+            box-shadow: 0 0.4em 0.1em 0.019em #fff;
+        }
+
+        button span:hover {
+            transition: all 0.5s;
+            transform: translate(0, 0.4em);
+            box-shadow: 0 0 0 0 #fff;
+        }
+
+        button span:not(hover) {
+            transition: all 1s;
+        }
+        .loader {
+            width: 100%;
+            height: 3px;
+            border-radius: 2px;
+            background-color: rgba(0, 0, 0, 0.672);
+        }
+        .charge {
+            height: 3px;
+            border-radius: 2px;
+            margin-left: -100%;
+        }
+        .bar {
+            display: flex;
+            width: 60%;
+            align-items: center;
+        }
+        .container{
+            width: 50%;
+            display: flex;
+            justify-content: right;
+            padding: 0%;
+            margin: 0%;
+            margin-left: -10em;
+        }
+        .container h1{
+            color: gray;
+            margin-right: 1em;
+            font-size: 1em;
+        }
+    </style>
+</head>
+<body style="margin: 0; background-color:#0f0e0e;">
+    <div id="encabezado">
+        <div class="bgperfil" style="background-color: black;">
+            <div class="img-bg"></div>
+        </div>
+        <div style="border-top: 1px solid #414040; display: inline-flex;">
+            <img src="Imgs/perfil.jfif" style="height: 10em; border-radius: 50%;margin-left: 3em;margin-top: -4em;border: 2px solid #414040;" alt="">
+            <div style="background-color: #414040; color: white; border-radius: 1em;width: 75%;margin-left: 2em;padding: 1em; margin-top: 2em;">
+                <h1 style="padding-left: 1em;">About Me...</h1>
+                <p style="padding-inline: 2em;">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vero, modi! Omnis sequi provident harum quas voluptatibus qui aut adipisci? Fugit ratione numquam qui maxime tempora?</p>
+            </div>
+            <button id="downloadBtn">
+                <span>Currículum</span>
+              </button>              
+        </div>
+        <div>
+            <h1 style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; font-size: 1.1em;margin-left: 2em;;color: white;margin-top: -4em;">@andresvargasesquivel</h1>
+        </div>
+    </div>
+    <div>
+        <div style="padding-top: 8em;">
+            <div class="container">
+                <h1>HTML</h1>
+                <div  class="bar">
+                    <div class="loader"></div>
+                    <div class="charge" style="width: 75%;box-shadow: rgb(188, 9, 9) 0px 2px 29px 0px;background-color: rgb(188, 9, 9);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>CSS</h1>
+                <div  class="bar">
+                    <div class="loader"></div>
+                    <div class="charge" style="width: 75%;box-shadow: rgb(9, 155, 188) 0px 2px 29px 0px;background-color: rgb(9, 155, 188);"></div>
+                </div>
+            </div>
+            <div class="container">
+                <h1>JS</h1>
+                <div  class="bar">
+                    <div class="loader"></div>
+                    <div class="charge" style="width: 50%;box-shadow: rgb(182, 188, 9) 0px 2px 29px 0px;background-color: rgb(182, 188, 9);"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="/JavaScript/Download.js"></script>
+</html>
