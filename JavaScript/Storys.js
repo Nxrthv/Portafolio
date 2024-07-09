@@ -3,9 +3,9 @@ document.addEventListener('DOMContentLoaded', function() {
     var story2 = document.getElementById('story2');
     var story3 = document.getElementById('story3');
     var story4 = document.getElementById('story4');
-    var slider = document.getElementById('slider');
+    var slider = document.getElementById('.slider-container');
     var closeButtons = document.querySelectorAll('.close');
-    var intervaloTiempo = 5000;
+    var intervaloTiempo = 1000;
     var intervals = {};
 
     story1.addEventListener('click', function() {
@@ -25,33 +25,22 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     function mostrarSlider(sliderContainerId, sliderId, storyId) {
-        // Ocultar todos los sliders antes de mostrar el específico
-        var containers = document.querySelectorAll('.slider-container');
-        containers.forEach(function(container) {
-            container.style.display = 'none';
-        });
-
-        // Mostrar el slider específico
         var container = document.getElementById(sliderContainerId);
         container.style.display = 'block';
         container.style.position = 'absolute';
 
-        // Detener intervalo anterior si existe
         if (intervals[storyId]) {
             clearInterval(intervals[storyId]);
         }
 
-        // Iniciar nuevo intervalo para cambiar las imágenes automáticamente
         intervals[storyId] = setInterval(function() {
             cambiarImagen(sliderId);
         }, intervaloTiempo);
 
-        // Detener el temporizador cuando el mouse está sobre el slider para evitar cambios mientras el usuario interactúa
         slider.addEventListener('mouseover', function() {
             clearInterval(intervals[storyId]);
         });
 
-        // Reanudar el temporizador cuando el mouse sale del slider
         slider.addEventListener('mouseleave', function() {
             intervals[storyId] = setInterval(function() {
                 cambiarImagen(sliderId);
@@ -62,15 +51,28 @@ document.addEventListener('DOMContentLoaded', function() {
     closeButtons.forEach(function(button) {
         button.addEventListener('click', function() {
             var sliderId = button.getAttribute('data-slider');
-            var container = document.getElementById(container);
-            var allslider1 =  document.getElementById('allslider1');
-            var allslider2 =  document.getElementById('allslider2');
-            var allslider3 =  document.getElementById('allslider3');
-            var allslider4 =  document.getElementById('allslider4');
-            allslider1.style.display = 'none';
-            allslider2.style.display = 'none';
-            allslider3.style.display = 'none';
-            allslider4.style.display = 'none';
+
+            var sliderContainer1 = document.getElementById('sliderContainer1');
+            var container1 =  document.getElementById('allslider1');
+
+            var sliderContainer2 = document.getElementById('sliderContainer2');
+            var container2 = document.getElementById('allslider2');
+
+            var sliderContainer3 = document.getElementById('sliderContainer3');
+            var container3 = document.getElementById('allslider3');
+
+            var sliderContainer4 = document.getElementById('sliderContainer4');
+            var container4 = document.getElementById('allslider4');
+
+            sliderContainer1.style.display = 'none;'
+            sliderContainer2.style.display = 'none;'
+            sliderContainer3.style.display = 'none;'
+            sliderContainer4.style.display = 'none;'
+            
+            container1.style.display = 'none';
+            container2.style.display = 'none';
+            container3.style.display = 'none';
+            container4.style.display = 'none';
             clearInterval(intervals[sliderId]);
         });
     });

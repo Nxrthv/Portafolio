@@ -28,7 +28,7 @@ body{
 .verificed{
     color: lightseagreen;
 }
-button{
+.follow, .message{
     padding-inline: 1.5em;
     margin-inline: 5px;
     border-radius: 8px;

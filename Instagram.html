@@ -40,14 +40,14 @@
         <div class="cont-storys">
             <div id="story1">
                 <span class="story"><img src="https://i.pinimg.com/564x/99/ea/6b/99ea6bb094c27bcc350d38df9b7c1a84.jpg" alt=""><p>me</p></span>
-                <div id="allslider1">
+                <div id="allslider1" class="allslider">
                     <div id="sliderContainer1" class="slider-container">
                         <div id="slider1" class="slider">
                             <div class="slide"><img src="https://i.pinimg.com/736x/f8/61/e3/f861e316ead24cb61ea2c9f10e306692.jpg" alt="Imagen 1"></div>
                             <div class="slide"><img src="https://i.pinimg.com/564x/d6/1d/f4/d61df49b3b838d5eba141dea71a29ed0.jpg" alt="Imagen 2"></div>
                             <div class="slide"><img src="https://i.pinimg.com/564x/4f/15/ba/4f15ba270d37bbdccb72a1e91cd457f5.jpg" alt="Imagen 3"></div>
                         </div>
-                        <button class="close" data-slider="sliderContainer1"><i class="fa-solid fa-xmark"></i></button>
+                        <button id="close1" class="close" data-slider="sliderContainer1"><i class="fa-solid fa-xmark"></i></button>
                     </div> 
                 </div>        
             </div>
@@ -60,7 +60,7 @@
                             <div class="slide"><img src="https://i.pinimg.com/564x/cf/11/7d/cf117d007825707286af495eb7abc182.jpg" alt="Imagen 2"></div>
                             <div class="slide"><img src="https://i.pinimg.com/564x/57/ff/ea/57ffea2e694e97f99a51a099087c8f02.jpg" alt="Imagen 3"></div>
                         </div>
-                        <button class="close" data-slider="sliderContainer2"><i class="fa-solid fa-xmark"></i></button>
+                        <button id="close2" class="close" data-slider="sliderContainer2"><i class="fa-solid fa-xmark"></i></button>
                     </div> 
                 </div>  
             </div>
@@ -73,7 +73,7 @@
                             <div class="slide"><img src="https://i.pinimg.com/564x/18/aa/9b/18aa9b9ed2eb2483cebeedb6f4fe8515.jpg" alt="Imagen 2"></div>
                             <div class="slide"><img src="https://i.pinimg.com/564x/e6/e7/f6/e6e7f6e8e1d787638742171c633ce468.jpg" alt="Imagen 3"></div>
                         </div>
-                        <button class="close" data-slider="sliderContainer3"><i class="fa-solid fa-xmark"></i></button>
+                        <button id="close3" class="close" data-slider="sliderContainer3"><i class="fa-solid fa-xmark"></i></button>
                     </div> 
                 </div>  
             </div>
@@ -86,7 +86,7 @@
                             <div class="slide"><img src="https://i.pinimg.com/564x/d6/1d/f4/d61df49b3b838d5eba141dea71a29ed0.jpg" alt="Imagen 2"></div>
                             <div class="slide"><img src="https://i.pinimg.com/564x/4f/15/ba/4f15ba270d37bbdccb72a1e91cd457f5.jpg" alt="Imagen 3"></div>
                         </div>
-                        <button class="close" data-slider="sliderContainer4"><i class="fa-solid fa-xmark"></i></button>
+                        <button id="close4" class="close" data-slider="sliderContainer4"><i class="fa-solid fa-xmark"></i></button>
                     </div> 
                 </div>  
             </div>
@@ -95,4 +95,26 @@
 </body>
 <script src="https://kit.fontawesome.com/880d240d27.js" crossorigin="anonymous"></script>
 <script src="JavaScript/Storys.js"></script>
+<script>
+    const reloadButton1 = document.getElementById('close1');
+    const reloadButton2 = document.getElementById('close2');
+    const reloadButton3 = document.getElementById('close3');
+    const reloadButton4 = document.getElementById('close4');
+
+    reloadButton1.addEventListener('click', function () {
+        window.location.reload();
+    });
+
+    reloadButton2.addEventListener('click', function () {
+        window.location.reload();
+    });
+
+    reloadButton3.addEventListener('click', function () {
+        window.location.reload();
+    });
+
+    reloadButton4.addEventListener('click', function () {
+        window.location.reload();
+    });
+</script>
 </html>
