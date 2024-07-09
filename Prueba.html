@@ -1,124 +1,118 @@
-<style>
-    /* Estilo básico para el contenedor del slider */
-#sliderContainer {
-    width: 100%;
-    max-width: 600px; /* Ajusta el ancho máximo según tus necesidades */
-    margin: 20px auto; /* Centra el contenedor */
-    text-align: center; /* Centra el botón de cerrar */
-}
-
-/* Estilo básico para el botón de cerrar */
-#cerrarSlider {
-    margin-top: 10px; /* Espacio superior */
-    padding: 5px 10px;
-    background-color: #ccc;
-    border: none;
-    cursor: pointer;
-}
-
-/* Estilo para el slider */
-.slider {
-    display: flex;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory; /* Hace que el scroll sea en modo obligatorio */
-    -webkit-overflow-scrolling: touch; /* Mejora el scrolling en dispositivos iOS */
-    scroll-behavior: smooth; /* Scroll suave */
-    -ms-overflow-style: none; /* Elimina la barra de desplazamiento en IE/Edge */
-    scrollbar-width: none; /* Elimina la barra de desplazamiento en Firefox */
-}
-
-.slide {
-    flex: 0 0 auto;
-    scroll-snap-align: start; /* Alinea cada imagen al inicio */
-    width: 100%;
-}
-
-.slide img {
-    width: 100%;
-    display: block;
-}
-
-</style>
-<button id="mostrarSlider">Mostrar Slider</button>
-
-<div id="sliderContainer" style="display: none;">
-    <button id="cerrarSlider">Cerrar</button>
-    <div id="slider" class="slider">
-        <div class="slide"><img src="imagen1.jpg" alt="Imagen 1"></div>
-        <div class="slide"><img src="imagen2.jpg" alt="Imagen 2"></div>
-        <div class="slide"><img src="imagen3.jpg" alt="Imagen 3"></div>
-        <!-- Agrega más imágenes según sea necesario -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejemplo de Sliders con Botón Cerrar</title>
+    <style>
+        /* Estilos CSS para los sliders y botón close */
+        .slider-container {
+            display: none; /* Los sliders inicialmente ocultos */
+            position: absolute;
+            border: 1px solid #ccc;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        .slider {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+        .slide {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            background-color: #ddd;
+            margin-right: 10px;
+        }
+        .close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            cursor: pointer;
+            background-color: #f44336;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <button id="story1">Abrir Slider 1</button>
+    <button id="story2">Abrir Slider 2</button>
+    
+    <div id="sliderContainer1" class="slider-container">
+        <div id="slider1" class="slider">
+            <div class="slide">Imagen 1</div>
+            <div class="slide">Imagen 2</div>
+            <div class="slide">Imagen 3</div>
+        </div>
+        <button class="close" data-slider="sliderContainer1">Cerrar</button>
     </div>
-</div>
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-    var mostrarSliderBtn = document.getElementById('mostrarSlider');
-    var sliderContainer = document.getElementById('sliderContainer');
-    var slider = document.getElementById('slider');
-    var cerrarSliderBtn = document.getElementById('cerrarSlider');
-    var intervaloTiempo = 5000; // Intervalo de cambio de imágenes en milisegundos (5 segundos)
-    var interval; // Variable para almacenar el intervalo
 
-    mostrarSliderBtn.addEventListener('click', function() {
-        // Mostrar el contenedor del slider
-        sliderContainer.style.display = 'block';
+    <div id="sliderContainer2" class="slider-container">
+        <div id="slider2" class="slider">
+            <div class="slide">Imagen A</div>
+            <div class="slide">Imagen B</div>
+            <div class="slide">Imagen C</div>
+        </div>
+        <button class="close" data-slider="sliderContainer2">Cerrar</button>
+    </div>
 
-        // Ajustar el tamaño del slider si es necesario
-        resizeSlider();
+    <script>
+        // Tu código JavaScript aquí
+        document.addEventListener('DOMContentLoaded', function() {
+            var story1 = document.getElementById('story1');
+            var story2 = document.getElementById('story2');
+            var sliderContainer1 = document.getElementById('sliderContainer1');
+            var sliderContainer2 = document.getElementById('sliderContainer2');
+            var closeButtons = document.querySelectorAll('.close');
+            var intervaloTiempo = 5000;
+            var intervals = {};
 
-        // Iniciar temporizador para cambiar las imágenes automáticamente
-        interval = setInterval(cambiarImagen, intervaloTiempo);
+            story1.addEventListener('click', function() {
+                mostrarSlider(sliderContainer1, 'slider1', 'story1');
+            });
 
-        // Detener el temporizador cuando el mouse está sobre el slider para evitar cambios mientras el usuario interactúa
-        slider.addEventListener('mouseover', function() {
-            clearInterval(interval);
+            story2.addEventListener('click', function() {
+                mostrarSlider(sliderContainer2, 'slider2', 'story2');
+            });
+
+            closeButtons.forEach(function(button) {
+                button.addEventListener('click', function() {
+                    var sliderId = button.getAttribute('data-slider');
+                    var container = document.getElementById(sliderId);
+                    container.style.display = 'none';
+                    clearInterval(intervals[sliderId]);
+                });
+            });
+
+            function mostrarSlider(container, sliderId, storyId) {
+                // Ocultar todos los sliders antes de mostrar el específico
+                var containers = document.querySelectorAll('.slider-container');
+                containers.forEach(function(container) {
+                    container.style.display = 'none';
+                });
+
+                // Mostrar el slider específico
+                container.style.display = 'block';
+
+                // Detener intervalo anterior si existe
+                if (intervals[storyId]) {
+                    clearInterval(intervals[storyId]);
+                }
+
+                // Iniciar nuevo intervalo para cambiar las imágenes automáticamente
+                intervals[storyId] = setInterval(function() {
+                    cambiarImagen(sliderId);
+                }, intervaloTiempo);
+            }
+
+            function cambiarImagen(sliderId) {
+                // Aquí va la lógica para cambiar las imágenes del slider
+                console.log('Cambiando imágenes del slider ' + sliderId);
+            }
         });
-
-        // Reanudar el temporizador cuando el mouse sale del slider
-        slider.addEventListener('mouseleave', function() {
-            interval = setInterval(cambiarImagen, intervaloTiempo);
-        });
-
-        // Opcional: Ajustar el tamaño del slider cuando se redimensiona la ventana
-        window.addEventListener('resize', resizeSlider);
-    });
-
-    cerrarSliderBtn.addEventListener('click', function() {
-        // Ocultar el contenedor del slider
-        sliderContainer.style.display = 'none';
-
-        // Detener el intervalo cuando se cierra el slider
-        clearInterval(interval);
-    });
-
-    function resizeSlider() {
-        // Calcula el ancho total de todas las imágenes en el slider
-        var totalWidth = 0;
-        var slides = document.querySelectorAll('.slide');
-        slides.forEach(function(slide) {
-            totalWidth += slide.offsetWidth;
-        });
-
-        // Establece el ancho del slider según el ancho total de las imágenes
-        slider.style.width = totalWidth + 'px';
-    }
-
-    function cambiarImagen() {
-        // Obtener todas las imágenes dentro del slider
-        var slides = document.querySelectorAll('.slide');
-
-        // Obtener la primera imagen visible
-        var primeraImagen = slides[0];
-
-        // Calcular el ancho de la primera imagen
-        var anchoImagen = primeraImagen.offsetWidth;
-
-        // Mover el primer slide al final
-        slider.appendChild(primeraImagen);
-
-        // Resetear la posición del slider para mostrar la nueva primera imagen
-        slider.scrollLeft += anchoImagen;
-    }
-});
-
-</script>
+    </script>
+</body>
+</html>
