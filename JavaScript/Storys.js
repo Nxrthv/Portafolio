@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var story4 = document.getElementById('story4');
     var slider = document.getElementById('.slider-container');
     var closeButtons = document.querySelectorAll('.close');
-    var intervaloTiempo = 1000;
+    var intervaloTiempo = 5000;
     var intervals = {};
 
     story1.addEventListener('click', function() {

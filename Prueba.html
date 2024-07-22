@@ -1,118 +1,24 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ejemplo de Sliders con Botón Cerrar</title>
-    <style>
-        /* Estilos CSS para los sliders y botón close */
-        .slider-container {
-            display: none; /* Los sliders inicialmente ocultos */
-            position: absolute;
-            border: 1px solid #ccc;
-            padding: 20px;
-            background-color: #f0f0f0;
-        }
-        .slider {
-            overflow: hidden;
-            white-space: nowrap;
-        }
-        .slide {
-            display: inline-block;
-            width: 100px;
-            height: 100px;
-            background-color: #ddd;
-            margin-right: 10px;
-        }
-        .close {
-            position: absolute;
-            top: 10px;
-            right: 10px;
-            cursor: pointer;
-            background-color: #f44336;
-            color: white;
-            border: none;
-            padding: 5px 10px;
-            border-radius: 5px;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Borde con Degradado y Border Radius</title>
+<style>
+    .contenedor {
+        width: 300px;
+        height: 200px;
+        border: 3px solid transparent; /* Borde transparente inicial */
+        border-image: linear-gradient(to right, #f00, #00f); /* Degradado como imagen de borde */
+        border-image-slice: 1; /* Para que el degradado cubra completamente el borde */
+        border-radius: 50%; /* Radio de borde de 20px */
+    }
+</style>
 </head>
 <body>
-    <button id="story1">Abrir Slider 1</button>
-    <button id="story2">Abrir Slider 2</button>
+    <div style="border-radius: 50%;">   
+        <div class="contenedor" style="border-radius: 50%;"></div>
+    </div>
     
-    <div id="sliderContainer1" class="slider-container">
-        <div id="slider1" class="slider">
-            <div class="slide">Imagen 1</div>
-            <div class="slide">Imagen 2</div>
-            <div class="slide">Imagen 3</div>
-        </div>
-        <button class="close" data-slider="sliderContainer1">Cerrar</button>
-    </div>
-
-    <div id="sliderContainer2" class="slider-container">
-        <div id="slider2" class="slider">
-            <div class="slide">Imagen A</div>
-            <div class="slide">Imagen B</div>
-            <div class="slide">Imagen C</div>
-        </div>
-        <button class="close" data-slider="sliderContainer2">Cerrar</button>
-    </div>
-
-    <script>
-        // Tu código JavaScript aquí
-        document.addEventListener('DOMContentLoaded', function() {
-            var story1 = document.getElementById('story1');
-            var story2 = document.getElementById('story2');
-            var sliderContainer1 = document.getElementById('sliderContainer1');
-            var sliderContainer2 = document.getElementById('sliderContainer2');
-            var closeButtons = document.querySelectorAll('.close');
-            var intervaloTiempo = 5000;
-            var intervals = {};
-
-            story1.addEventListener('click', function() {
-                mostrarSlider(sliderContainer1, 'slider1', 'story1');
-            });
-
-            story2.addEventListener('click', function() {
-                mostrarSlider(sliderContainer2, 'slider2', 'story2');
-            });
-
-            closeButtons.forEach(function(button) {
-                button.addEventListener('click', function() {
-                    var sliderId = button.getAttribute('data-slider');
-                    var container = document.getElementById(sliderId);
-                    container.style.display = 'none';
-                    clearInterval(intervals[sliderId]);
-                });
-            });
-
-            function mostrarSlider(container, sliderId, storyId) {
-                // Ocultar todos los sliders antes de mostrar el específico
-                var containers = document.querySelectorAll('.slider-container');
-                containers.forEach(function(container) {
-                    container.style.display = 'none';
-                });
-
-                // Mostrar el slider específico
-                container.style.display = 'block';
-
-                // Detener intervalo anterior si existe
-                if (intervals[storyId]) {
-                    clearInterval(intervals[storyId]);
-                }
-
-                // Iniciar nuevo intervalo para cambiar las imágenes automáticamente
-                intervals[storyId] = setInterval(function() {
-                    cambiarImagen(sliderId);
-                }, intervaloTiempo);
-            }
-
-            function cambiarImagen(sliderId) {
-                // Aquí va la lógica para cambiar las imágenes del slider
-                console.log('Cambiando imágenes del slider ' + sliderId);
-            }
-        });
-    </script>
 </body>
 </html>

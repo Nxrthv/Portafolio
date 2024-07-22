@@ -19,7 +19,7 @@
 #content{
     color: var(--w);
     font-family: 'Exo 2', sans-serif;
-    margin-top: 150px;
+    margin-top: 60px;
     justify-content: space-between;
 }
 .cont-text{
