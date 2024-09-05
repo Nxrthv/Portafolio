@@ -2,8 +2,8 @@
     "projects" :[
         {
             "title_project" : "WEB - SAN PEDRO",
-            "year" : "2024",
-            "title_year" : "Year",
+            "year" : "May-20-2024",
+            "title_year" : "Start",
             "status" : "75%",
             "title_status" : "Status",
             "link" : "#",
@@ -11,12 +11,12 @@
         },
         {
             "title_project" : "CHAT-APP",
-            "year" : "2024",
-            "title_year" : "Year",
+            "year" : "Jul-13-2024",
+            "title_year" : "Start",
             "status" : "40%",
             "title_status" : "Status",
             "link" : "#",
-            "imagen" : "https://i.pinimg.com/originals/13/45/50/13455040862ac9b8e465185878838cf1.gif"
+            "imagen" : "https://i.pinimg.com/originals/b1/5b/d5/b15bd596014d9d9310e59b07b85da550.gif"
         }
     ]
 }

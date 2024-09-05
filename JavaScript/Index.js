@@ -146,3 +146,10 @@ document.addEventListener('scroll', function() {
       }
   });
 });
+
+const scrollButton = document.getElementById('mover');
+        const destino = document.getElementById('text');
+
+        scrollButton.addEventListener('click', function() {
+            destino.scrollIntoView({ behavior: 'smooth' });
+        });
