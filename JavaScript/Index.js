@@ -84,7 +84,7 @@ fetch('Files/Projects.json')
       const link = document.createElement('a');
       link.href = datos.link;
       const rightAngleIcon = document.createElement('i');
-      rightAngleIcon.classList.add('fa-solid', 'fa-angles-right');
+      rightAngleIcon.classList.add('bi', 'bi-link-45deg');
       link.appendChild(rightAngleIcon);
       redirectionDiv.appendChild(link);
       row1Div.appendChild(redirectionDiv);
@@ -148,7 +148,7 @@ document.addEventListener('scroll', function() {
 });
 
 const scrollButton = document.getElementById('mover');
-        const destino = document.getElementById('text');
+        const destino = document.getElementById('projects');
 
         scrollButton.addEventListener('click', function() {
             destino.scrollIntoView({ behavior: 'smooth' });
