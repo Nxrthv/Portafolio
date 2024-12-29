@@ -6,27 +6,70 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
 
-:root{
+:root {
     --w: white;
     --b: #0B0B0B;
     --g: gray;
 }
 
-.text-game{
+.text-game {
     font-family: 'Dela Gothic One', cursive;
     font-family: 'Inconsolata', monospace;
     font-family: 'Overpass', sans-serif;
     font-family: 'Pixelify Sans', cursive;
 }
 
+/* Redes */
+.tooltip-container {
+    color: #ffffff;
+    position: relative;
+    background: var(--b);
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 18px;
+}
+
+.tooltip {
+    background-color: #ffffff;
+    border-radius: 10px;
+    position: absolute;
+    color: #0B0B0B;
+    width: auto;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.3s;
+}
+
+.tooltip::before {
+    background-color: #ffffff;
+    position: absolute;
+    content: "";
+    height: 0.6em;
+    width: 0.6em;
+    bottom: 2.1em;
+    left: 50%;
+    transform: translate(-50%) rotate(45deg);
+}
+
+.tooltip-container:hover .tooltip {
+    top: 120%;
+    opacity: 1;
+    visibility: visible;
+    pointer-events: auto;
+}
+
 /* About Me */
-.text{
+.text {
     color: var(--w);
     font-size: 18px;
     background-color: rgb(15, 15, 15);
     transition: .4s ease;
 }
-.text:hover{
+
+.text:hover {
     cursor: pointer;
     box-shadow: 0 0 10px #ffffffbe;
 }
@@ -37,15 +80,18 @@
     overflow: hidden;
     transition: box-shadow 0.3s ease-in-out;
 }
+
 .btn-skill:hover {
     cursor: pointer;
     box-shadow: 0 0 10px #ffffffbe;
 }
+
 .btn-skill p {
     position: relative;
     margin: 0;
     transition: transform 0.3s ease-in-out;
 }
+
 .btn-skill p span {
     display: inline-block;
     position: absolute;
@@ -57,9 +103,11 @@
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
+
 .btn-skill:hover p {
     transform: translateY(-10px);
 }
+
 .btn-skill:hover p span {
     opacity: 1;
 }
