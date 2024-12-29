@@ -7,9 +7,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Exo+2&family=Josefin+Sans:wght@200&display=swap');
 
 :root {
-    --w: white;
+    --w: #ffffff;
+    --wh: #dcdcdc;
     --b: #0B0B0B;
-    --g: gray;
+    --g: #808080;
+    --dg: #0F0F0F;
 }
 
 .text-game {
@@ -21,7 +23,7 @@
 
 /* Nav */
 .tab:hover {
-    background-color: #dcdcdc;
+    background-color: var(--wh);
 }
 
 .tab-content > div {
@@ -33,7 +35,7 @@
 }
 
 .nav-pills {
-    background-color: white;
+    background-color: var(--w);
 }
 
 .tab-link {
@@ -45,23 +47,23 @@
 }
 
 .tab-link.active {
-    background-color: #0F0F0F;
-    color: white;
+    background-color: var(--dg);
+    color: var(--wh);
 }
 
 .tab-link:hover {
     transform: scale(105%);
-    color: #0F0F0F;
+    color: var(--dg);
 }
 
 .tab-link:focus {
-    background-color: #0F0F0F;
-    color: white;
+    background-color: var(--dg);
+    color: var(--wh);
 }
 
 /* Redes */
 .tooltip-container {
-    color: #ffffff;
+    color: var(--w);
     position: relative;
     background: var(--b);
     cursor: pointer;
@@ -71,10 +73,10 @@
 }
 
 .tooltip {
-    background-color: #ffffff;
+    background-color: var(--w);
     border-radius: 10px;
     position: absolute;
-    color: #0B0B0B;
+    color: var(--dg);
     width: auto;
     top: 0;
     left: 50%;
@@ -85,7 +87,7 @@
 }
 
 .tooltip::before {
-    background-color: #ffffff;
+    background-color: var(--w);
     position: absolute;
     content: "";
     height: 0.6em;
@@ -106,7 +108,7 @@
 .text {
     color: var(--w);
     font-size: 18px;
-    background-color: rgb(15, 15, 15);
+    background-color: var(--dg);
     transition: .4s ease;
 }
 
@@ -140,7 +142,7 @@
     left: 7px;
     text-align: center;
     font-size: 0.8em;
-    color: #fff;
+    color: var(--w);
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
