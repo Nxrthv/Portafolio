@@ -1,19 +1,33 @@
 // Loading Animation
-window.addEventListener('load', () =>{
-    const contenedor_loader = document.querySelector('.content_loader')
-        contenedor_loader.style.opacity = 0
-        contenedor_loader.style.visibility = 'hidden'
-})
+window.addEventListener("load", () => {
+  const contenedor_loader = document.querySelector(".content_loader");
+  contenedor_loader.style.opacity = 0;
+  contenedor_loader.style.visibility = "hidden";
+});
 
-// Reading Animation
-// const palabras = ["Student...", "Software Engineer...", "Web Developer...", "Front Developer..."];
-// const MaquinaDeEscribir = document.getElementById("animation");
-// let indicePalabraActual = 0;
+// Cargar Popper.js
+var popperScript = document.createElement("script");
+popperScript.src =
+  "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js";
+popperScript.type = "text/javascript";
+document.head.appendChild(popperScript);
 
-// function cambiarPalabra() {
-//     MaquinaDeEscribir.innerHTML = palabras[indicePalabraActual];
-//     indicePalabraActual = (indicePalabraActual + 1) % palabras.length;
-//     setTimeout(cambiarPalabra, 4000);
-// }
+// Cargar Bootstrap.js
+var bootstrapScript = document.createElement("script");
+bootstrapScript.src =
+  "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js";
+bootstrapScript.type = "text/javascript";
+document.head.appendChild(bootstrapScript);
 
-// cambiarPalabra();
+// Cargar Bootstrap Icons
+var bootstrapIconsLink = document.createElement("link");
+bootstrapIconsLink.href =
+  "https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css";
+bootstrapIconsLink.rel = "stylesheet";
+document.head.appendChild(bootstrapIconsLink);
+
+// Cargar jQuery
+var jqueryScript = document.createElement("script");
+jqueryScript.src = "https://code.jquery.com/jquery-3.5.1.slim.min.js";
+jqueryScript.type = "text/javascript";
+document.head.appendChild(jqueryScript);

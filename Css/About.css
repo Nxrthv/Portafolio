@@ -19,6 +19,46 @@
     font-family: 'Pixelify Sans', cursive;
 }
 
+/* Nav */
+.tab:hover {
+    background-color: #dcdcdc;
+}
+
+.tab-content > div {
+    display: none;
+}
+
+.tab-content .active {
+    display: block;
+}
+
+.nav-pills {
+    background-color: white;
+}
+
+.tab-link {
+    padding: .5em;
+    transition: all 0.3s ease;
+    border: none;
+    border-radius: 50%;
+    font-size: 1.3em;
+}
+
+.tab-link.active {
+    background-color: #0F0F0F;
+    color: white;
+}
+
+.tab-link:hover {
+    transform: scale(105%);
+    color: #0F0F0F;
+}
+
+.tab-link:focus {
+    background-color: #0F0F0F;
+    color: white;
+}
+
 /* Redes */
 .tooltip-container {
     color: #ffffff;
