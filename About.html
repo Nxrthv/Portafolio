@@ -134,7 +134,7 @@
             </section>
         </div>
         <div id="moreaboutme" style="height: 100vh;" class="tab-pane fade">
-            <section id="songs" class="col-12 col-lg-3 bg">
+            <section id="songs" class="col-10 col-lg-3 mx-lg-0 mx-auto bg">
                 <div class="main">
                     <div class="d-flex align-content-center justify-content-center">
                         <i class="bi bi-spotify" style="font-size: 2em; color: #76DA6C;"></i>
@@ -165,44 +165,44 @@
 <script src="/JavaScript/Scripts.js"></script>
 <script>
     fetch('/Files/Songs.json')
-      .then(response => response.json())
-      .then(songs => {
-        songs.sort((a, b) => a.artist.localeCompare(b.artist));
+        .then(response => response.json())
+        .then(songs => {
+            songs.sort((a, b) => a.artist.localeCompare(b.artist));
 
-        const songList = document.getElementById('song-list');
-        songs.forEach(song => {
-          const linkElement = document.createElement('a');
-          linkElement.href = song.link;
-          linkElement.className = 'loader1';
-          linkElement.target = '_blank';
+            const songList = document.getElementById('song-list');
+            songs.forEach(song => {
+                const linkElement = document.createElement('a');
+                linkElement.href = song.link;
+                linkElement.className = 'loader1';
+                linkElement.target = '_blank';
 
-          const albumCover = document.createElement('div');
-          albumCover.className = 'albumcover';
+                const albumCover = document.createElement('div');
+                albumCover.className = 'albumcover';
 
-          const songDiv = document.createElement('div');
-          songDiv.className = 'song';
+                const songDiv = document.createElement('div');
+                songDiv.className = 'song';
 
-          const nameParagraph = document.createElement('p');
-          nameParagraph.className = 'name';
-          nameParagraph.textContent = song.name;
+                const nameParagraph = document.createElement('p');
+                nameParagraph.className = 'name';
+                nameParagraph.textContent = song.name;
 
-          const artistParagraph = document.createElement('p');
-          artistParagraph.className = 'artist';
-          artistParagraph.textContent = song.artist;
+                const artistParagraph = document.createElement('p');
+                artistParagraph.className = 'artist';
+                artistParagraph.textContent = song.artist;
 
-          const playIcon = document.createElement('i');
-          playIcon.className = 'bi bi-play-fill play';
+                const playIcon = document.createElement('i');
+                playIcon.className = 'bi bi-play-fill play';
 
-          linkElement.appendChild(albumCover);
-          songDiv.appendChild(nameParagraph);
-          songDiv.appendChild(artistParagraph);
-          linkElement.appendChild(songDiv);
-          linkElement.appendChild(playIcon);
+                linkElement.appendChild(albumCover);
+                songDiv.appendChild(nameParagraph);
+                songDiv.appendChild(artistParagraph);
+                linkElement.appendChild(songDiv);
+                linkElement.appendChild(playIcon);
 
-          songList.appendChild(linkElement);
-        });
-      })
-      .catch(error => console.error('Error loading songs:', error));
-  </script>
+                songList.appendChild(linkElement);
+            });
+        })
+        .catch(error => console.error('Error loading songs:', error));
+</script>
 
 </html>
