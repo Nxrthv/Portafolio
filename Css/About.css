@@ -8,279 +8,61 @@
 
 :root{
     --w: white;
-    --b: black;
+    --b: #0B0B0B;
     --g: gray;
 }
 
-.body{
-    background-color: var(--b);
-}
-
-#content{
-    color: var(--w);
-    font-family: 'Exo 2', sans-serif;
-    margin-top: 60px;
-    justify-content: space-between;
-}
-.cont-text{
-    background: linear-gradient(to right, rgb(0, 0, 0), var(--w));
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-align: right;
-}
-.sub-text{
-    margin-bottom: 0px;
-    text-align: center;
-    margin-left: 50px;
-}
-.title{
-    margin-bottom: .5em;
-    margin-right: 40px;
-}
-#perfil{
-    margin-left: 50px;
-    max-width: 280px;
-    max-height: 280px;
-    border-radius: 50%;
-    box-shadow: 0px 0px 30px rgba(255, 255, 255, 0.744);
-}
-.welcome{
-    background: linear-gradient(to right, var(--g), var(--w));
-    background-clip: text;
-    -webkit-background-clip: text;
-    margin-left: 15.5em;
-    text-align: left;
-
-}
-.welcome a{
-    text-decoration: none;
-}
-#redes{
-    position: absolute;
-    display: flex;
-    margin-left: 15em;
-    margin-top: 11em;
-}
-#redes a{
-    margin: 5px;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-decoration: none;
-    transition: .5s;
-    color: rgb(58, 56, 56);
-    font-size: 2.5em;
-    -webkit-box-reflect: below 5px linear-gradient(to 
-    bottom, rgba(0,0,0,0.0), rgba(0, 0, 0, 0.168));
-}
-#redes a:hover{
-    color: var(--w);
-}
-#cont-animation{
-    margin-left: 11.5em;
-    font-size: 22px;
-    font-family: Arial, Helvetica, sans-serif;
-}
-#animation {
-    margin-left: 4px;
-    border-right: 2px solid gray;
-    animation: caret 0.75s steps(1) infinite;
-}
-.efecto{
-    background: #ffffff;
-    position: relative;
-}
-.efecto::after{
-    content: "";
-    background: #ff0000;
-    right: 0;
-    height: 100%;
-    width: 100%;
-    animation: delete 2s infinite alternate steps(14);
-    position: absolute;
-}
-@keyframes delete{
-    from{
-        width: 100%;
-    }
-    to{
-        width: 0;
-    }
-}
-@keyframes caret {
-    50% {
-        border-color: transparent;
-    }
-}
-.title-about{
+.text-game{
     font-family: 'Dela Gothic One', cursive;
     font-family: 'Inconsolata', monospace;
     font-family: 'Overpass', sans-serif;
     font-family: 'Pixelify Sans', cursive;
-    color: var(--w);
-    text-align: start;
-    font-size: 20px;
-    margin: 80px auto 40px 16%;
 }
-.about-me{
-    font-family: 'Exo 2', sans-serif;
+
+/* About Me */
+.text{
     color: var(--w);
-    width: 750px;
-    margin: auto auto 60px auto;
-    padding: 20px 50px 20px 50px;
-    text-align: center;
-    border-radius: 10px;
+    font-size: 18px;
     background-color: rgb(15, 15, 15);
     transition: .4s ease;
 }
-.about-me:hover{
+.text:hover{
     cursor: pointer;
     transition: 0.4s ease;
-    opacity: .8;
     background-color: rgb(42, 40, 40);
     box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.744);
 }
-.title-skills{
-    font-family: 'Dela Gothic One', cursive;
-    font-family: 'Inconsolata', monospace;
-    font-family: 'Overpass', sans-serif;
-    font-family: 'Pixelify Sans', cursive;
-    color: var(--w);
-    text-align: start;
-    font-size: 18px;
-    margin: 0px auto 20px 16%;
-}
-.content-skills{
-    display: flex;
-    flex-wrap: wrap;
-    width: 750px;
-    margin: auto;
-    justify-content: space-between;
-    padding-bottom: 4%;
-}
-.btn-skill{
-    width: 165px;
-    background-color: rgb(15, 15, 15);
-    display: flex;
-    border-radius: 5px;
-    margin-bottom: 20px;
-    
-}
-.btn-skill:hover{
-    opacity: .8;
-    background-color: rgb(42, 40, 40);
-    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.744);
-}
-.btn-skill span {
-    margin-top: 13px;
-    cursor: pointer;
-    transition: 0.4s;
-    color: var(--w);
-}  
-.btn-skill span:after {
-    content: 'Advanced';
-    font-size: 12px;
-    display: flex;
-    opacity: 0;
-    top: 0;
-    transition: 0.7s;
-}
-.btn-skill:hover span {
+
+/* My Skills */
+.btn-skill {
+    margin: 5px;
     position: relative;
-    margin-top: 0;
-   }
-   
-.btn-skill:hover span:after {
-    opacity: 4;
+    overflow: hidden;
+    transition: box-shadow 0.3s ease-in-out;
 }
-.skill{
-    font-family: 'Exo 2', sans-serif;
-    font-size: 14px;
-    color: var(--w);
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+.btn-skill:hover {
+    cursor: pointer;
+    box-shadow: 0 0 10px #ffffffbe;
 }
-.icon-skill{
-    padding: 8px;
-    margin-right: 6px;
-    margin-left: 4px;
+.btn-skill p {
+    position: relative;
+    margin: 0;
+    transition: transform 0.3s ease-in-out;
 }
-
-@media screen and (max-width: 768px) {
-    .content{
-        font-family: 'Exo 2', sans-serif;
-        display: flex;
-    }
-    .title{
-        width: 200px;
-        margin-left: 20px;
-        font-size: 25px;
-    }
-    .sub-text{
-        width: 150px;
-        margin-left: 20px;
-    }
-    .perfil{
-        width: 150px;
-        height: 150px;
-    }
-    .main{
-        margin-left: 0px;
-    }
-    .welcome{
-        font-size: 15px;
-    }
-    .welcome a{
-        text-decoration: none;
-    }
-    .animation::before{
-        content: '> ';
-    }
-    .about-me{
-        width: 450px;
-        margin-left: 1em;
-    }
-    .content-skills{
-        width: 380px;
-        margin-left: 3em;
-    }
+.btn-skill p span {
+    display: inline-block;
+    position: absolute;
+    top: 20px;
+    left: 7px;
+    text-align: center;
+    font-size: 0.8em;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
 }
-
-@media screen and (max-width: 992px) {
-    .content{
-        font-family: 'Exo 2', sans-serif;
-        display: flex;
-    }
-        .title{
-            margin-right: 110px;
-            font-size: 25px;
-        }
-        .sub-text{
-            margin-right:150px;
-        }
-        .perfil{
-            width: 150px;
-            height: 150px;
-        }
-        #redes{
-            margin-left: 2em;
-            margin-top: 10em;
-        }
-        .main{
-            margin-left: -70px;
-        }
-        .welcome{
-            font-size: 15px;
-        }
-        .welcome a{
-            text-decoration: none;
-        }
-        .animation::before{
-            content: '> ';
-        }
+.btn-skill:hover p {
+    transform: translateY(-10px);
+}
+.btn-skill:hover p span {
+    opacity: 1;
 }

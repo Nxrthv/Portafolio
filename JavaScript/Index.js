@@ -148,8 +148,9 @@ document.addEventListener('scroll', function() {
 });
 
 const scrollButton = document.getElementById('mover');
-        const destino = document.getElementById('projects');
 
-        scrollButton.addEventListener('click', function() {
-            destino.scrollIntoView({ behavior: 'smooth' });
-        });
+scrollButton.addEventListener('click', function() {
+    const destino = document.getElementById('projects');
+    destino.scrollIntoView({ behavior: 'smooth' });
+    window.scrollTo({ top: destino.offsetTop - 2 * 16, behavior: 'smooth' });
+});

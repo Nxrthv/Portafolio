@@ -42,8 +42,10 @@
     -1px 0px 0px #ffffff, 0px -1px 0px #ffffff;
 }
 
-.arrow{
-  animation: arrow infinite 1s;
+.arrow-down{
+  animation: moverAnimacion 1s infinite;
+  display: flex;
+  justify-content: center;
 }
 
 /* Galaga */
@@ -83,17 +85,10 @@
   width: 100%;
   background-color: #181818 !important;
   padding: 5px;
-  margin: 1em;
+  margin: 0 1em 1em 1em;
   justify-content: space-between;
   transition: 0.4s ease;
 }
-
-@media (min-width: 992px) {
-  .card {
-    width: 47%;
-  }
-}
-
 .card:hover {
   box-shadow: 0px 0px 15px 5px #cacaca18;
   transition: 0.4s ease;
@@ -110,10 +105,10 @@
   flex-direction: column;
   position: absolute;
 }
-.img-project{
+.img-project {
   width: 100%;
-  max-height: 20em;
-  border-radius: .5em;
+  height: 100%;
+  border-radius: 0.5em;
 }
 .card .top-section .icons {
   position: absolute;
@@ -168,7 +163,7 @@
 }
 .card .bottom-section .row .redirection a {
   color: #ffffffb8;
-    font-size: 30px;
+  font-size: 30px;
 }
 .card .bottom-section .row .item .big-text {
   font-size: 14px;
@@ -182,18 +177,16 @@
   border-right: 1px solid rgba(255, 255, 255, 0.126);
 }
 
-/* Animations */
-@keyframes arrow {
-  0% {
-    transform: translateY(0.3em);
+@media (min-width: 992px) {
+  .card {
+    width: 47%;
   }
-  50% {
-    transform: translateY(0em);
-  }
-  100% {
-    transform: translateY(0.3em);
+  .img-project {
+    height: 300px;
   }
 }
+
+/* Animations */
 .arrow {
   animation: arrow 1s linear infinite;
 }
@@ -212,5 +205,16 @@
   0% {
     transform: translateY(2em);
     transition: 1.5s ease;
+  }
+}
+@keyframes moverAnimacion {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }

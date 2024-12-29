@@ -6,14 +6,14 @@ window.addEventListener('load', () =>{
 })
 
 // Reading Animation
-const palabras = ["Student...", "Software Engineer...", "Web Developer...", "Front Developer..."];
-const MaquinaDeEscribir = document.getElementById("animation");
-let indicePalabraActual = 0;
+// const palabras = ["Student...", "Software Engineer...", "Web Developer...", "Front Developer..."];
+// const MaquinaDeEscribir = document.getElementById("animation");
+// let indicePalabraActual = 0;
 
-function cambiarPalabra() {
-    MaquinaDeEscribir.innerHTML = palabras[indicePalabraActual];
-    indicePalabraActual = (indicePalabraActual + 1) % palabras.length;
-    setTimeout(cambiarPalabra, 4000);
-}
+// function cambiarPalabra() {
+//     MaquinaDeEscribir.innerHTML = palabras[indicePalabraActual];
+//     indicePalabraActual = (indicePalabraActual + 1) % palabras.length;
+//     setTimeout(cambiarPalabra, 4000);
+// }
 
-cambiarPalabra();
+// cambiarPalabra();
