@@ -1,19 +1,19 @@
 {
     "projects" :[
         {
-            "title_project" : "WEB - TELEINCA",
+            "title_project" : "TELEINCA S.A.C.",
             "year" : "Dic-15-2024",
             "title_year" : "In development",
             "status" : "90%",
             "title_status" : "Status",
-            "link" : "https://teleincasac.netlify.app",
+            "link" : "#",
             "imagen" : "https://i.pinimg.com/originals/74/63/59/74635989b770a38189fff31a8ef152ea.gif"
         },
         {
-            "title_project" : "CHAT-APP",
-            "year" : "Jul-13-2024",
+            "title_project" : "HUANUCO TELECOM S.A.C.",
+            "year" : "Dic-26-2024",
             "title_year" : "Start",
-            "status" : "40%",
+            "status" : "75%",
             "title_status" : "In development",
             "link" : "#",
             "imagen" : "https://i.pinimg.com/originals/b1/5b/d5/b15bd596014d9d9310e59b07b85da550.gif"

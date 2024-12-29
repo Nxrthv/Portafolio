@@ -26,7 +26,7 @@
     background-color: var(--wh);
 }
 
-.tab-content > div {
+.tab-content>div {
     display: none;
 }
 
@@ -153,4 +153,104 @@
 
 .btn-skill:hover p span {
     opacity: 1;
+}
+
+/* Songs */
+.div-responsive {
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+}
+.main {
+    background-color: white;
+    padding: .5em;
+    border-radius: 15px;
+    margin: 1em;
+}
+.loader1 {
+    display: flex;
+    height: 70px;
+    padding-inline: .5em;
+    transform: rotate(180deg);
+    justify-content: right;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    color: var(--b);
+}
+.loader1:hover {
+    cursor: pointer;
+    background-color: var(--wh);
+}
+.loading {
+    display: flex;
+    margin-top: 1em;
+    margin-left: 0.3em;
+    order: 1;
+}
+.load {
+    width: 2px;
+    height: 33px;
+    background-color: limegreen;
+    animation: 1s move6 infinite;
+    border-radius: 5px;
+    margin: 0.1em;  
+}
+.load:nth-child(1) {
+    animation-delay: 0.2s;
+}
+.load:nth-child(2) {
+    animation-delay: 0.4s;
+}
+.load:nth-child(3) {
+    animation-delay: 0.6s;
+}
+@keyframes move6 {
+    0% {
+        height: 0.2em;
+    }
+
+    25% {
+        height: 0.7em;
+    }
+
+    50% {
+        height: 1.5em;
+    }
+
+    100% {
+        height: 0.2em;
+    }
+}
+.play {
+    left: 0.35em;
+    height: 1.6em;
+    width: 1.6em;
+    clip-path: polygon(50% 50%, 100% 50%, 75% 6.6%);
+    background-color: black;
+    transform: rotate(-90deg);
+    align-self: center;
+    margin-top: 0.7em;
+    order: 1;
+}
+.albumcover {
+    margin-right: 1em;
+    height: 40px;
+    width: 40px;
+    background-color: rgb(233, 232, 232);
+    align-self: center;
+    border-radius: 5px;
+    order: 1;
+}
+.song {
+    transform: rotate(180deg);
+    margin-right: 1em;
+}
+.name{
+    margin-top: 1em;
+}
+.artist {
+    margin-top: -1.5em;
+    font-size: 0.7em;
 }

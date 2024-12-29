@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Songs</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
+  <style>
+    .loader1 {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+      color: inherit;
+      margin: 10px 0;
+    }
+    .albumcover {
+      width: 50px;
+      height: 50px;
+      background-color: lightgray;
+      margin-right: 10px;
+    }
+    .song {
+      margin-left: 10px;
+    }
+    .play {
+      margin-left: auto;
+      font-size: 24px;
+    }
+  </style>
+</head>
+<body>
+  <div id="song-list"></div>
+
+  <script>
+    // Cargar datos del JSON
+    fetch('/Files/Songs.json')
+      .then(response => response.json())
+      .then(songs => {
+        const songList = document.getElementById('song-list');
+        songs.forEach(song => {
+          // Crear elemento <a>
+          const linkElement = document.createElement('a');
+          linkElement.href = song.link;
+          linkElement.className = 'loader1';
+          linkElement.target = '_blank';
+
+          // Crear portada del álbum
+          const albumCover = document.createElement('div');
+          albumCover.className = 'albumcover';
+
+          // Crear contenido de la canción
+          const songDiv = document.createElement('div');
+          songDiv.className = 'song';
+
+          const nameParagraph = document.createElement('p');
+          nameParagraph.className = 'name';
+          nameParagraph.textContent = song.name;
+
+          const artistParagraph = document.createElement('p');
+          artistParagraph.className = 'artist';
+          artistParagraph.textContent = song.artist;
+
+          // Crear icono de reproducción
+          const playIcon = document.createElement('i');
+          playIcon.className = 'bi bi-play-fill play';
+
+          // Construir la estructura
+          linkElement.appendChild(albumCover); // Primero la portada
+          songDiv.appendChild(nameParagraph); // Luego los nombres
+          songDiv.appendChild(artistParagraph);
+          linkElement.appendChild(songDiv);
+          linkElement.appendChild(playIcon); // Finalmente el icono de play
+
+          // Agregar al contenedor principal
+          songList.appendChild(linkElement);
+        });
+      })
+      .catch(error => console.error('Error loading songs:', error));
+  </script>
+</body>
+</html>

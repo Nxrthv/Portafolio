@@ -23,21 +23,24 @@
 </div>
 
 <body style="background-color: var(--b)">
-    
+
     <section class="tab-content justify-content-center">
-        <ul class="nav nav-pills d-flex col-8 col-lg-2 p-2 mt-5 mx-auto justify-content-evenly rounded-pill" id="tabList" role="tablist">
+        <ul class="nav nav-pills d-flex col-8 col-lg-2 p-2 mt-5 mx-auto justify-content-evenly rounded-pill"
+            id="tabList" role="tablist">
             <li class="tab-item mx-2" role="presentation">
-                <button class="tab-link" onclick="location.href='index.html'" id="tab1" data-bs-toggle="pill" data-bs-target="#" type="button">
+                <button class="tab-link" onclick="location.href='index.html'" id="tab1" data-bs-toggle="pill"
+                    data-bs-target="#" type="button">
                     <i class="bi bi-house p-1"></i>
                 </button>
             </li>
-    
+
             <li class="tab-item mx-2" role="presentation">
-                <button class="tab-link active" id="tab2" data-bs-toggle="pill" data-bs-target="#perfilprof" type="button">
+                <button class="tab-link active" id="tab2" data-bs-toggle="pill" data-bs-target="#perfilprof"
+                    type="button">
                     <i class="bi bi-person-bounding-box p-1"></i>
                 </button>
             </li>
-    
+
             <li class="tab-item mx-2" role="presentation">
                 <button class="tab-link" id="tab3" data-bs-toggle="pill" data-bs-target="#moreaboutme" type="button">
                     <i class="bi bi-dice-5 p-1"></i>
@@ -69,15 +72,15 @@
                         </div>
                         <div class="tooltip-container">
                             <span class="tooltip text-center">¿Charlamos?</span>
-                            <a href="https://discordapp.com/users/872202411052257320" target="_blank" class="nav-link mx-2"
-                                style="font-size: 2.5em"><i class="bi bi-discord"></i></a>
+                            <a href="https://discordapp.com/users/872202411052257320" target="_blank"
+                                class="nav-link mx-2" style="font-size: 2.5em"><i class="bi bi-discord"></i></a>
                         </div>
                     </div>
                 </div>
                 <img class="col-lg-5 col-8 mx-auto mb-5 mb-lg-0 order-1 order-lg-2"
                     style="border-radius: 50%; border: 4px solid var(--g)" src="/Imgs/perfil-insta.jpeg" />
             </section>
-    
+
             <section id="about-me" class="mx-auto col-10 col-lg-8">
                 <p class="about mx-lg-5 mx-2 mt-5 text-white text-game" style="font-size: 1.5em">
                     About Me
@@ -91,7 +94,7 @@
                     diseño de software.
                 </p>
             </section>
-    
+
             <section id="my-skills" class="mx-auto mb-5 col-10 col-lg-8">
                 <p class="about mx-lg-5 mx-2 mt-5 text-white text-game" style="font-size: 1.5em">
                     My Skills
@@ -131,10 +134,75 @@
             </section>
         </div>
         <div id="moreaboutme" style="height: 100vh;" class="tab-pane fade">
-            <h1>hola</h1>
+            <section id="songs" class="col-12 col-lg-3 bg">
+                <div class="main">
+                    <div class="d-flex align-content-center justify-content-center">
+                        <i class="bi bi-spotify" style="font-size: 2em; color: #76DA6C;"></i>
+                        <p class="fw-bold mx-2 mt-3">My List Songs</p>
+                    </div>
+                    <div class="div-responsive">
+                        <a href="https://www.youtube.com/watch?v=h2H6CtuUkcs" target="_blank" class="loader1">
+                            <div class="song">
+                                <p class="name">Used to be</p>
+                                <p class="artist">Arrows to Athens</p>
+                            </div>
+                            <div class="albumcover"></div>
+                            <div class="loading">
+                                <div class="load"></div>
+                                <div class="load"></div>
+                                <div class="load"></div>
+                                <div class="load"></div>
+                            </div>
+                        </a>
+                        <div id="song-list"></div>
+                    </div>
+                </div>
+            </section>
         </div>
     </section>
+
 </body>
 <script src="/JavaScript/Scripts.js"></script>
+<script>
+    fetch('/Files/Songs.json')
+      .then(response => response.json())
+      .then(songs => {
+        songs.sort((a, b) => a.artist.localeCompare(b.artist));
+
+        const songList = document.getElementById('song-list');
+        songs.forEach(song => {
+          const linkElement = document.createElement('a');
+          linkElement.href = song.link;
+          linkElement.className = 'loader1';
+          linkElement.target = '_blank';
+
+          const albumCover = document.createElement('div');
+          albumCover.className = 'albumcover';
+
+          const songDiv = document.createElement('div');
+          songDiv.className = 'song';
+
+          const nameParagraph = document.createElement('p');
+          nameParagraph.className = 'name';
+          nameParagraph.textContent = song.name;
+
+          const artistParagraph = document.createElement('p');
+          artistParagraph.className = 'artist';
+          artistParagraph.textContent = song.artist;
+
+          const playIcon = document.createElement('i');
+          playIcon.className = 'bi bi-play-fill play';
+
+          linkElement.appendChild(albumCover);
+          songDiv.appendChild(nameParagraph);
+          songDiv.appendChild(artistParagraph);
+          linkElement.appendChild(songDiv);
+          linkElement.appendChild(playIcon);
+
+          songList.appendChild(linkElement);
+        });
+      })
+      .catch(error => console.error('Error loading songs:', error));
+  </script>
 
 </html>
