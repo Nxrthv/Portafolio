@@ -3,79 +3,90 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dynamic Songs</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.5/font/bootstrap-icons.min.css">
-  <style>
-    .loader1 {
-      display: flex;
-      align-items: center;
-      text-decoration: none;
-      color: inherit;
-      margin: 10px 0;
-    }
-    .albumcover {
-      width: 50px;
-      height: 50px;
-      background-color: lightgray;
-      margin-right: 10px;
-    }
-    .song {
-      margin-left: 10px;
-    }
-    .play {
-      margin-left: auto;
-      font-size: 24px;
-    }
-  </style>
+  <title>Document</title>
 </head>
 <body>
-  <div id="song-list"></div>
-
-  <script>
-    // Cargar datos del JSON
-    fetch('/Files/Songs.json')
-      .then(response => response.json())
-      .then(songs => {
-        const songList = document.getElementById('song-list');
-        songs.forEach(song => {
-          // Crear elemento <a>
-          const linkElement = document.createElement('a');
-          linkElement.href = song.link;
-          linkElement.className = 'loader1';
-          linkElement.target = '_blank';
-
-          // Crear portada del álbum
-          const albumCover = document.createElement('div');
-          albumCover.className = 'albumcover';
-
-          // Crear contenido de la canción
-          const songDiv = document.createElement('div');
-          songDiv.className = 'song';
-
-          const nameParagraph = document.createElement('p');
-          nameParagraph.className = 'name';
-          nameParagraph.textContent = song.name;
-
-          const artistParagraph = document.createElement('p');
-          artistParagraph.className = 'artist';
-          artistParagraph.textContent = song.artist;
-
-          // Crear icono de reproducción
-          const playIcon = document.createElement('i');
-          playIcon.className = 'bi bi-play-fill play';
-
-          // Construir la estructura
-          linkElement.appendChild(albumCover); // Primero la portada
-          songDiv.appendChild(nameParagraph); // Luego los nombres
-          songDiv.appendChild(artistParagraph);
-          linkElement.appendChild(songDiv);
-          linkElement.appendChild(playIcon); // Finalmente el icono de play
-
-          // Agregar al contenedor principal
-          songList.appendChild(linkElement);
-        });
-      })
-      .catch(error => console.error('Error loading songs:', error));
-  </script>
+  <div class="container">
+    <!-- Navigation Links -->
+    <ul id="movie-nav" class="nav nav-tabs"></ul>
+  
+    <!-- Movie Display -->
+    <div id="movie-container" class="mt-4"></div>
+  </div>
+  
 </body>
+<script>
+  const movieContainer = document.getElementById('movie-container');
+  const movieNav = document.getElementById('movie-nav');
+
+  // Fetch data from the JSON file
+  let movies = [];
+  fetch('/Files/Movies.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Error fetching the JSON file');
+      }
+      return response.json();
+    })
+    .then(data => {
+      movies = data; // Save the movies data
+      renderNavButtons(); // Render navigation buttons dynamically
+      renderMovie(movies[0].name); // Render the first movie by default
+    })
+    .catch(error => console.error('Error:', error));
+
+  // Function to render navigation buttons
+  function renderNavButtons() {
+    movieNav.innerHTML = ''; // Clear previous content
+
+    movies.forEach(movie => {
+      const navButton = `
+        <li class="nav-item">
+          <a class="nav-link" href="#" data-name="${movie.name}">${movie.name}</a>
+        </li>
+      `;
+      movieNav.insertAdjacentHTML('beforeend', navButton);
+    });
+
+    // Add event listeners to buttons
+    const navLinks = document.querySelectorAll('.nav-link');
+    navLinks.forEach(link => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+        // Remove active class from all links
+        navLinks.forEach(nav => nav.classList.remove('active'));
+        // Add active class to the clicked link
+        e.target.classList.add('active');
+        // Get the name from data attribute
+        const name = e.target.getAttribute('data-name');
+        // Render the selected movie
+        renderMovie(name);
+      });
+    });
+
+    // Set the first button as active by default
+    if (navLinks.length > 0) {
+      navLinks[0].classList.add('active');
+    }
+  }
+
+  // Function to render a movie by its name
+  function renderMovie(name) {
+    const movie = movies.find(movie => movie.name === name);
+    if (!movie) return;
+
+    movieContainer.innerHTML = `
+      <div class="position-relative w-100 rounded mb-4" style="background-image: url('${movie.backgroundImage}'); height: 67vh; background-position: center; background-repeat: no-repeat;">
+        <div class="text-overlay text-white p-4">
+          <p class="display-6 fw-bold my-2">${movie.title}</p>
+          <p class="fw-light py-0 my-0">${movie.quote}</p>
+          <p style="text-align: end;">${movie.rating}</p>
+        </div>
+      </div>
+    `;
+  }
+</script>
+
+
+
 </html>

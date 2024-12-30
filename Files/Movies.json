@@ -1,0 +1,31 @@
+[
+    {
+      "title": "Eternal Sunshine of the Spotless Mind",
+      "quote": "\"Por favor déjame conservar este, solo este recuerdo.\"",
+      "rating": "★ ★ ★ ★ ★",
+      "backgroundImage": "https://cdn.culturagenial.com/es/imagenes/eterno-resplandor-de-una-mente-sin-recuerdos-og.jpg",
+      "name": "Eternal_Sunshine"
+    },
+    {
+      "title": "Blade Runner",
+      "quote": "\"El dolor le recuerda que la felicidad que sintió fue real.\"",
+      "rating": "★ ★ ★ ★ ★",
+      "backgroundImage": "https://i.pinimg.com/1200x/82/60/30/826030eb10cd11d0a4a9d671129a8a2b.jpg",
+      "name": "Blade_Runner_2049"
+    },
+    {
+      "title": "The Society of Dead Poets",
+      "quote": "\"Cuando leas, no solo consideres lo que piensa el autor, considera lo que piensas tú.\"",
+      "rating": "★ ★ ★ ★ ★",
+      "backgroundImage": "https://i0.wp.com/www.retrozap.com/wp-content/uploads/2018/06/Dead-Poets-Society-Carpe-Diem.jpg?resize=1000%2C539&quality=89&ssl=1",
+      "name": "Society_Dead_Poets"
+    },
+    {
+      "title": "Good Will Hunting",
+      "quote": "\"Tu no eres perfecto muchacho, y te ahorrare el suspenso. La chica que conociste tamoco es perfecta. La cuestion es si son perfectos el uno para el otro.\"",
+      "rating": "★ ★ ★ ★ ★",
+      "backgroundImage": "https://www.infobae.com/new-resizer/8lHwYCJ_47MkndlRxB-uIX3OSHc=/arc-anglerfish-arc2-prod-infobae/public/S4AH4IZ4Z5DFJMKZVM4WBLVQPE.jpg",
+      "name": "Good_Will_Hunting"
+    }
+  ]
+  
