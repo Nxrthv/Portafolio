@@ -46,7 +46,7 @@
                 </button>
             </li>
         </ul>
-        <div id="perfilprof" class="tab-pane fade">
+        <div id="perfilprof" class="tab-pane fade show active">
             <section id="perfil" class="col-12 col-lg-8 d-flex flex-wrap mt-5 m-auto">
                 <div class="col-10 mx-auto col-lg-6 align-content-center text-white fw-light order-2 order-lg-1">
                     <p style="font-size: 24px" class="mb-0">Hello World, I'm</p>
@@ -134,7 +134,7 @@
                 </div>
             </section>
         </div>
-        <div id="moreaboutme" class="tab-pane fade show active d-flex flex-wrap">
+        <div id="moreaboutme" class="tab-pane fade d-flex flex-wrap">
             <section id="songs" class="col-10 col-lg-3 mx-auto">
                 <div class="main">
                     <div class="d-flex align-content-center justify-content-center">
@@ -214,64 +214,65 @@
 <script>
     const movieContainer = document.getElementById('movie-container');
     const movieNav = document.getElementById('movie-nav');
-  
+
     let movies = [];
     fetch('/Files/Movies.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Error fetching the JSON file');
-        }
-        return response.json();
-      })
-      .then(data => {
-        movies = data;
-        renderNavButtons();
-        renderMovie(movies[0].name);
-      })
-      .catch(error => console.error('Error:', error));
-  
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Error fetching the JSON file');
+            }
+            return response.json();
+        })
+        .then(data => {
+            movies = data;
+            renderNavButtons();
+            renderMovie(movies[0].title);
+        })
+        .catch(error => console.error('Error:', error));
+
     function renderNavButtons() {
-      movieNav.innerHTML = '';
-  
-      movies.forEach(movie => {
-        const navButton = `
+        movieNav.innerHTML = '';
+
+        movies.forEach((movie, index) => {
+            const isActive = index === 0 ? 'active' : '';
+            const navButton = `
           <li class="mx-1 text-white">
-            <a class="nav-link px-2" href="#" data-name="${movie.name}" onfocus="this.style.backgroundColor='var(--wh)'; this.style.color='var(--b)';" onblur="this.style.backgroundColor='var(--b)'; this.style.color='';">${movie.name}</a>
+            <a class="nav-link px-3 py-1 ${isActive}" href="#" data-title="${movie.title}" 
+               onfocus="this.style.backgroundColor='var(--wh)'; this.style.color='var(--b)';" 
+               onblur="this.style.backgroundColor='var(--b)'; this.style.color='';" 
+               style="white-space: nowrap; font-size="18px";>${movie.title}</a>
           </li>
         `;
-        movieNav.insertAdjacentHTML('beforeend', navButton);
-      });
-  
-      const navLinks = document.querySelectorAll('.nav-link');
-      navLinks.forEach(link => {
-        link.addEventListener('click', (e) => {
-          e.preventDefault();
-          navLinks.forEach(nav => nav.classList.remove('active'));
-          e.target.classList.add('active');
-          const name = e.target.getAttribute('data-name');
-          renderMovie(name);
+            movieNav.insertAdjacentHTML('beforeend', navButton);
         });
-      });
-  
-      if (navLinks.length > 0) {
-        navLinks[0].classList.add('active');
-      }
+
+        const navLinks = document.querySelectorAll('.nav-link');
+        navLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                e.preventDefault();
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                e.target.classList.add('active');
+                const t = e.target.getAttribute('data-title');
+                renderMovie(t);
+            });
+        });
     }
-  
-    function renderMovie(name) {
-      const movie = movies.find(movie => movie.name === name);
-      if (!movie) return;
-  
-      movieContainer.innerHTML = `
-        <div class="position-relative w-100 rounded mb-4" style="background-image: url('${movie.backgroundImage}'); height: 68vh; background-size: cover; background-position: center; background-repeat: no-repeat;">
+
+    function renderMovie(title) {
+        const movie = movies.find(movie => movie.title === title);
+        if (!movie) return;
+
+        movieContainer.innerHTML = `
+        <div class="position-relative w-100 rounded mb-4" 
+             style="background-image: url('${movie.backgroundImage}'); height: 67vh; background-size: cover; background-position: center; background-repeat: no-repeat;">
           <div class="text-overlay text-white p-4">
-            <p style="text-align: end;">${movie.rating}</p>
             <p class="display-6 fw-bold my-2">${movie.title}</p>
             <p class="fw-light py-0 my-0">${movie.quote}</p>
+            <p class="text-end mt-4 fw-bold">${movie.rating}</p>
           </div>
         </div>
       `;
     }
-  </script>
-  
+</script>
+
 </html>
