@@ -1,27 +1,38 @@
 [
-    {
-      "title": "Eternal Sunshine of the Spotless Mind",
-      "quote": "\"Por favor déjame conservar este, solo este recuerdo.\"",
-      "rating": "★ ★ ★ ★ ★",
-      "backgroundImage": "https://cdn.culturagenial.com/es/imagenes/eterno-resplandor-de-una-mente-sin-recuerdos-og.jpg"
-    },
-    {
-      "title": "Blade Runner",
-      "quote": "\"El dolor le recuerda que la felicidad que sintió fue real.\"",
-      "rating": "★ ★ ★ ★ ★",
-      "backgroundImage": "https://i.pinimg.com/1200x/82/60/30/826030eb10cd11d0a4a9d671129a8a2b.jpg"
-    },
-    {
-      "title": "The Society of Dead Poets",
-      "quote": "\"Cuando leas, no solo consideres lo que piensa el autor, considera lo que piensas tú.\"",
-      "rating": "★ ★ ★ ★ ★",
-      "backgroundImage": "https://i0.wp.com/www.retrozap.com/wp-content/uploads/2018/06/Dead-Poets-Society-Carpe-Diem.jpg?resize=1000%2C539&quality=89&ssl=1"
-    },
-    {
-      "title": "Good Will Hunting",
-      "quote": "\"Tu no eres perfecto muchacho, y te ahorrare el suspenso. La chica que conociste tamoco es perfecta. La cuestion es si son perfectos el uno para el otro.\"",
-      "rating": "★ ★ ★ ★ ★",
-      "backgroundImage": "https://www.infobae.com/new-resizer/8lHwYCJ_47MkndlRxB-uIX3OSHc=/arc-anglerfish-arc2-prod-infobae/public/S4AH4IZ4Z5DFJMKZVM4WBLVQPE.jpg"
-    }
-  ]
-  
+  {
+    "title": "FURY",
+    "quote": "\"Los iideales son pacificos, la historia es violenta.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://static0.srcdn.com/wordpress/wp-content/uploads/2016/10/Fury-WWII-tank-movie-cast.jpg"
+  },
+  {
+    "title": "Eternal Sunshine of the Spotless Mind",
+    "quote": "\"Por favor déjame conservar este, solo este recuerdo.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://www.seenandunseen.com/sites/default/files/styles/article_image_with_caption/public/2024-07/ESOTSM_Carrey_WInslet.jpg?h=199d8c1f&itok=Ci5fdfu0"
+  },
+  {
+    "title": "Blade Runner 2049",
+    "quote": "\"El dolor le recuerda que la felicidad que sintió fue real.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://thecavesofaltamira.com/wp-content/uploads/2017/10/blade-runner-2049-ryan-gosling-ana-de-armas.jpg?w=1088"
+  },
+  {
+    "title": "The Society of Dead Poets",
+    "quote": "\"Cuando leas, no solo consideres lo que piensa el autor, considera lo que piensas tú.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://www.hollywoodreporter.com/wp-content/uploads/2014/08/Dead_Poets_Society.jpg?w=2000&h=1126&crop=1"
+  },
+  {
+    "title": "Good Will Hunting",
+    "quote": "\"Tu no eres perfecto muchacho, y te ahorrare el suspenso. La chica que conociste tampoco es perfecta. La cuestion es si son perfectos el uno para el otro.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://www.slashfilm.com/img/gallery/robin-williams-had-matt-damon-in-tears-on-the-first-day-of-filming-good-will-hunting/intro-1648477746.jpg"
+  },
+  {
+    "title": "Interstellar",
+    "quote": "\"Antes mirábamos hacia arriba soñando con qué lugar ocuparíamos entre las estrellas. Ahora miramos hacia abajo, angustiándonos con qué lugar ocuparemos entre el polvo.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://i.huffpost.com/gen/1801084/thumbs/o-JESSICA-CHASTAIN-INTERSTELLAR-facebook.jpg"
+  }
+]

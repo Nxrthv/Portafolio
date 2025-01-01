@@ -22,9 +22,9 @@
     </div>
 </div>
 
-<body style="background-color: var(--b)">
+<body style="background-color: var(--c12)">
     <section class="tab-content justify-content-center">
-        <ul class="nav nav-pills d-flex col-8 col-lg-2 p-2 my-4 mx-auto justify-content-evenly rounded-pill"
+        <ul class="nav nav-pills d-flex col-8 col-lg-2 p-2 mt-4 mx-auto justify-content-evenly rounded-pill"
             id="tabList" role="tablist">
             <li class="tab-item mx-2" role="presentation">
                 <button class="tab-link" onclick="location.href='index.html'" id="tab1" data-bs-toggle="pill"
@@ -46,7 +46,7 @@
                 </button>
             </li>
         </ul>
-        <div id="perfilprof" class="tab-pane fade show active">
+        <div id="perfilprof" class="tab-pane fade">
             <section id="perfil" class="col-12 col-lg-8 d-flex flex-wrap mt-5 m-auto">
                 <div class="col-10 mx-auto col-lg-6 align-content-center text-white fw-light order-2 order-lg-1">
                     <p style="font-size: 24px" class="mb-0">Hello World, I'm</p>
@@ -134,7 +134,15 @@
                 </div>
             </section>
         </div>
-        <div id="moreaboutme" class="tab-pane fade d-flex flex-wrap">
+        <div id="moreaboutme" class="tab-pane fade show active d-flex flex-wrap">
+            <section id="movies" class="col-12 px-2 mt-4">
+                <div>
+                    <p class="display-6 text-white text-center">My Favourite Movies</p>
+                    <div id="movie-container"></div>
+                    <ul class="d-flex div-responsivex nav-pills list-unstyled bg-transparent mt-2" id="movie-nav">
+                    </ul>
+                </div>
+            </section>
             <section id="songs" class="col-10 col-lg-3 mx-auto">
                 <div class="main">
                     <div class="d-flex align-content-center justify-content-center">
@@ -159,13 +167,7 @@
                     </div>
                 </div>
             </section>
-            <section id="movies" class="col-12 col-lg-9 px-4">
-                <div class="col-12">
-                    <ul class="d-flex div-responsivex nav-pills list-unstyled border-0 bg-transparent" id="movie-nav">
-                    </ul>
-                    <div id="movie-container"></div>
-                </div>
-            </section>
+            <section id=""></section>
         </div>
     </section>
 </body>
@@ -236,17 +238,14 @@
         movies.forEach((movie, index) => {
             const isActive = index === 0 ? 'active' : '';
             const navButton = `
-          <li class="mx-1 text-white">
-            <a class="nav-link px-3 py-1 ${isActive}" href="#" data-title="${movie.title}" 
-               onfocus="this.style.backgroundColor='var(--wh)'; this.style.color='var(--b)';" 
-               onblur="this.style.backgroundColor='var(--b)'; this.style.color='';" 
-               style="white-space: nowrap; font-size="18px";>${movie.title}</a>
+          <li class="m-1">
+            <a class="link-item px-3 py-2 rounded-pill ${isActive}" href="#" data-title="${movie.title}"">${movie.title}</a>
           </li>
         `;
             movieNav.insertAdjacentHTML('beforeend', navButton);
         });
 
-        const navLinks = document.querySelectorAll('.nav-link');
+        const navLinks = document.querySelectorAll('.link-item');
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 e.preventDefault();
@@ -263,15 +262,17 @@
         if (!movie) return;
 
         movieContainer.innerHTML = `
-        <div class="position-relative w-100 rounded mb-4" 
-             style="background-image: url('${movie.backgroundImage}'); height: 67vh; background-size: cover; background-position: center; background-repeat: no-repeat;">
-          <div class="text-overlay text-white p-4">
-            <p class="display-6 fw-bold my-2">${movie.title}</p>
-            <p class="fw-light py-0 my-0">${movie.quote}</p>
-            <p class="text-end mt-4 fw-bold">${movie.rating}</p>
-          </div>
-        </div>
-      `;
+            <div class="position-relative rounded" 
+                style="height: 80vh; background-size: cover; background-position: top; background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.6) 80%, #0B0B0B 100%), url('${movie.backgroundImage}');" >
+              <div class="text-overlay text-white p-4 position-relative">
+                <div class="d-flex flex-wrap">
+                  <span class="display-6 fw-bold my-2 col-12 col-lg-5">${movie.title}</span>
+                  <p class="text-end fw-bold col-lg-7 col-12">${movie.rating}</p>
+                </div>
+                <p class="fw-light py-0 my-0 col-12 col-lg-5">${movie.quote}</p>
+              </div>
+            </div>
+        `;
     }
 </script>
 
