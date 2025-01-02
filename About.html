@@ -47,8 +47,8 @@
                 </button>
             </li>
         </ul>
-        <div id="perfilprof" class="tab-pane show active fade">
-            <section id="perfil" class="col-12 col-lg-8 d-flex flex-wrap mt-5 m-auto">
+        <div id="perfilprof" class="tab-pane show active fade" style="height: 40vh">
+            <section id="perfil" class="col-12 col-lg-8 d-flex flex-wrap mt-5 mx-auto">
                 <div class="col-10 mx-auto col-lg-6 align-content-center text-white fw-light order-2 order-lg-1">
                     <p style="font-size: 24px" class="mb-0">Hello World, I'm</p>
                     <p class="display-5">Andres Vargas</p>
@@ -134,21 +134,38 @@
                     </div>
                 </div>
             </section>
+
+            <section class="pt-5">
+                <div class="col-12 col-lg-6 mx-auto">
+                    <div class="cube-container">
+                        <div class="cube">
+                            <div class="face front">Front</div>
+                            <div class="face back">Back</div>
+                            <div class="face right">Right</div>
+                            <div class="face left">Left</div>
+                            <div class="face top">Top</div>
+                            <div class="face bottom">Bottom</div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
         </div>
         <div id="moreaboutme" class="tab-pane fade d-flex flex-wrap">
             <section id="movies" class="col-12 px-2 mt-4">
-                <div>
-                    <p class="display-6 text-white text-center">My Favourite Movies</p>
-                    <div id="movie-container"></div>
-                    <ul class="d-flex div-responsivex nav-pills list-unstyled bg-transparent mt-2" id="movie-nav">
-                    </ul>
+                <div class="d-flex align-content-center mb-2 justify-content-center">
+                    <img src="/Imgs/netflix.png" class="bi bi-movies" style="width: 2em; height: 2em; color: #76da6c" />
+                    <p class="fw-bold mx-2 mt-2 text-white">Top Movies</p>
                 </div>
+                <div id="movie-container"></div>
+                <ul class="d-flex div-responsivex nav-pills list-unstyled bg-transparent mt-2" id="movie-nav">
+                </ul>
             </section>
-            <section id="songs" class="col-10 col-lg-3 mx-auto">
+            <section id="songs" class="col-10 col-lg-3">
                 <div class="main">
                     <div class="d-flex align-content-center justify-content-center">
                         <i class="bi bi-spotify" style="font-size: 2em; color: #76da6c"></i>
-                        <p class="fw-bold mx-2 mt-3">My List Songs</p>
+                        <p class="fw-bold mx-2 mt-3">Playlist</p>
                     </div>
                     <div class="div-responsive">
                         <a href="https://www.youtube.com/watch?v=h2H6CtuUkcs" target="_blank" class="loader1">
@@ -168,7 +185,14 @@
                     </div>
                 </div>
             </section>
-            <section id=""></section>
+            <section id="games" class="col-10 col-lg-7 mt-4 mx-auto">
+                <div class="d-flex align-content-center mb-2 justify-content-center">
+                    <i class="bi bi-steam"
+                        style="font-size: 2em; background: linear-gradient(to bottom, #0E1C30, #137FB0); -webkit-background-clip: text; color: transparent;"></i>
+                    <p class="fw-bold mx-2 mt-3 text-white">Best Games</p>
+                </div>
+                <div class="div-responsivex"></div>
+            </section>
         </div>
     </section>
 </body>
