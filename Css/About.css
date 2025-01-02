@@ -35,7 +35,7 @@
     color: var(--c9);
 }
 .tab-link.active{
-    color: var(--b);
+    color: var(--c12);
 }
 .tab-link:focus {
     color: var(--c12);
@@ -44,19 +44,19 @@
 
 /* Redes */
 .tooltip-container {
-    color: var(--w);
+    color: var(--c1);
     position: relative;
-    background: var(--b);
+    background: var(--c12);
     cursor: pointer;
     transition: all 0.2s;
     font-size: 18px;
     margin-inline-end: 1em;
 }
 .tooltip {
-    background-color: var(--w);
+    background-color: var(--c1);
     border-radius: 10px;
     position: absolute;
-    color: var(--dg);
+    color: var(--c12);
     width: auto;
     top: 0;
     left: 50%;
@@ -66,7 +66,7 @@
     transition: all 0.3s;
 }
 .tooltip::before {
-    background-color: var(--w);
+    background-color: var(--c1);
     position: absolute;
     content: "";
     height: 0.6em;
@@ -84,14 +84,14 @@
 
 /* About Me */
 .text {
-    color: var(--w);
+    color: var(--c1);
     font-size: 18px;
-    background-color: var(--dg);
+    background-color: var(--c11);
     transition: .4s ease;
 }
 .text:hover {
     cursor: pointer;
-    box-shadow: 0 0 10px #ffffffbe;
+    box-shadow: 0 0 10px var(--c4);
 }
 
 /* My Skills */
@@ -102,7 +102,7 @@
 }
 .btn-skill:hover {
     cursor: pointer;
-    box-shadow: 0 0 10px #ffffffbe;
+    box-shadow: 0 0 10px var(--c4);
 }
 .btn-skill p {
     position: relative;
@@ -116,7 +116,6 @@
     left: 7px;
     text-align: center;
     font-size: 0.8em;
-    color: var(--w);
     opacity: 0;
     transition: all 0.3s ease-in-out;
 }
