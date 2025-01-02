@@ -209,18 +209,6 @@
     }
 }
 
-/* Scrooll */
-::-webkit-scrollbar-thumb {
-    background: var(--c12);
-    border-radius: 5px;
-    width: 5px;
-    height: 5px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: var(--c11);
-}
-
 /* Songs */
 .div-responsive {
     height: 60vh;
@@ -392,8 +380,7 @@
     width: 100%;
     border: 1px solid #0E1C30;
     transform: scale(0.8);
-    box-shadow: #0E1C30 0px 30px 70px 0px;
-    transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
+    box-shadow: #137DAE 20px 40px 70px;
 }
 
 .card1 .main {
@@ -530,4 +517,16 @@
 .button:hover .tooltip1 {
     position: relative;
     display: block;
+}
+    
+/* Scrooll */
+::-webkit-scrollbar-corner {
+    background: var(--c10);
+    border-radius: 5px;
+    width: 5px;
+    height: 5px;
+}
+
+::-webkit-scrollbar:hover {
+    background: var(--c8);
 }
