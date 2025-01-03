@@ -39,11 +39,10 @@
 }
 .tab-link:hover{
     color: var(--c1);
-    transform: scale(125%) rotate(360deg);
 }
 .tab-link.active {
     color: var(--c1);
-    transform: scale(125%);
+    transform: scale(125%) rotate(360deg);
 }
 
 .tab-link:focus {
