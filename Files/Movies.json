@@ -1,7 +1,7 @@
 [
   {
     "title": "FURY",
-    "quote": "\"Los iideales son pacificos, la historia es violenta.\"",
+    "quote": "\"Los ideales son pacificos, la historia es violenta.\"",
     "rating": "★ ★ ★ ★ ★",
     "backgroundImage": "https://static0.srcdn.com/wordpress/wp-content/uploads/2016/10/Fury-WWII-tank-movie-cast.jpg"
   },
@@ -36,22 +36,46 @@
     "backgroundImage": "https://i.huffpost.com/gen/1801084/thumbs/o-JESSICA-CHASTAIN-INTERSTELLAR-facebook.jpg"
   },
   {
+    "title": "As Above so Below",
+    "quote": "\"La unica forma de salir es bajando.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://m.media-amazon.com/images/M/MV5BNTU5ODQ2MTk1Nl5BMl5BanBnXkFtZTgwMTI5NjA1MjE@._V1_.jpg"
+  },
+  {
+    "title": "The Shutter Island",
+    "quote": "\"El pasado es una construcción de la mente, un relato que no siempre se ajusta a la realidad.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://www.criticfilm.com/wp-content/uploads/2023/10/shutter-island-final-scene.jpg"
+  },
+  {
     "title": "Hacksaw Ridge",
     "quote": "\"Tal vez soy un orgulloso y tonto. Pero no sé cómo vivir conmigo mismo sino me mantengo fiel a lo que creo. Menos si tú quisieras vivir conmigo. Nunca seré el hombre que quiero ser ante tus ojos.\"",
     "rating": "★ ★ ★ ★ ★",
     "backgroundImage": "https://m.media-amazon.com/images/S/pv-target-images/c81d7cb6f5a96eb18c9aa516b090216963378821e989b95acd925050b4e956ea._SX1080_FMjpg_.jpg"
   },
   {
+    "title": "Now You See Me",
+    "quote": "\"Acérquense. Más. Porque cuanto más crean que ven, más fácil será el engaño. Porque ¿qué es ver? Uno mira, pero lo que realmente hace es filtrar, interpretar, buscar significado. ¿Mi trabajo? Atraer el más preciado de los regalos que me hacen: su atención. Y utilizarla en su contra.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://m.wsj.net/video/20130828/082813nowyouseemeclip/082813nowyouseemeclip_1280x720.jpg"
+  },
+  {
     "title": "The Maze Runner",
     "quote": "\"Ahora sabía la respuesta exacta a aquella pregunta y a algunas más. Lo suficiente para saber que a veces el conocimiento da asco.\"",
     "rating": "★ ★ ★ ★ ★",
-    "backgroundImage": "https://static1.moviewebimages.com/wordpress/wp-content/uploads/2023/07/dylan-o-brien-as-thomas-carving-his-name-into-the-wall.jpg"
+    "backgroundImage": "https://images.mubicdn.net/images/film/113979/cache-92340-1445948210/image-w1280.jpg"
   },
   {
     "title": "The Batman",
     "quote": "\"El miedo es una herramienta. Cuando esa luz golpea el cielo, no es solo una llamada. Es una advertencia. Creen que me estoy escondiendo en las sombras. Mirando. Esperando para atacar. Yo soy las sombras.\"",
     "rating": "★ ★ ★ ★ ★",
     "backgroundImage": "https://media.newyorker.com/photos/62292fc6a5dfad61b91b18ae/master/w_2560%2Cc_limit/Brody-The-Batman.jpg"
+  },
+  {
+    "title": "The Joker",
+    "quote": "\"Me he pasado toda la vida sin saber si realmente existía. Pero existo. Y la gente está empezando a darse cuenta.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://es.gizmodo.com/app/uploads/2019/10/mzzthgxxqujktguyuwe5.jpg"
   },
   {
     "title": "Se7en",
@@ -63,6 +87,24 @@
     "title": "Prisioners",
     "quote": "\"Espera lo mejor, preparate para lo peor.\"",
     "rating": "★ ★ ★ ★ ★",
-    "backgroundImage": "https://static.independent.co.uk/s3fs-public/thumbnails/image/2013/09/26/18/45-prisoners-al.jpg"
+    "backgroundImage": "https://cdn.mos.cms.futurecdn.net/x2meZ5dZ9B8Hjuw3g9rQbH-1200-80.jpg"
+  },
+  {
+    "title": "The Imitation Game",
+    "quote": "\"Aveces es la gente de la que nadie espera nada la que hace cosas que nadie puede imaginar.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://hacerselacritica.com/wp-content/uploads/2015/02/imitationgame.jpg"
+  },
+  {
+    "title": "The Boy in the Striped Pyjamas",
+    "quote": "\"¿Por qué te vistes con pijama todo el tiempo?\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://s.libertaddigital.com/2023/03/01/nino-pijama-rayas.jpg"
+  },
+  {
+    "title": "Pride and Prejudice",
+    "quote": "\"A veces la última persona en el mundo con la que quieres estar es la única persona sin la que no puedes estar.\"",
+    "rating": "★ ★ ★ ★ ★",
+    "backgroundImage": "https://www.quever.news/u/fotografias/m/2022/2/4/f1280x720-23152_154827_5236.jpg"
   }
 ]

@@ -17,7 +17,6 @@
 /* Nav */
 .tab-content>div {
     display: none;
-
 }
 
 .tab-content.active {
@@ -212,13 +211,6 @@
 }
 
 /* Songs */
-.div-responsive {
-    height: 60vh;
-    overflow-x: hidden;
-    overflow-y: auto;
-    padding: 10px;
-}
-
 .main {
     background-color: var(--c12);
     padding: .5em;
@@ -353,7 +345,7 @@
 /* Games */
 .card1 {
     position: relative;
-    height: 360px;
+    height: 25em;
 }
 
 .card1:hover .boxshadow {
@@ -440,17 +432,17 @@
 }
 
 .card1 .main .button-container .button:nth-child(1) {
-    bottom: 360px;
+    bottom: 25em;
     transition-delay: 0.4s;
 }
 
 .card1 .main .button-container .button:nth-child(2) {
-    bottom: 360px;
+    bottom: 25em;
     transition-delay: 0.6s;
 }
 
 .card1 .main .button-container .button:nth-child(3) {
-    bottom: 360px;
+    bottom: 25em;
     transition-delay: 0.8s;
 }
 
@@ -501,10 +493,19 @@
 }
     
 /* Scrooll */
+.div-responsive {
+    height: 25em;
+    overflow-x: hidden;
+    overflow-y: auto;
+    padding: 10px;
+}
 .div-responsivex {
     width: 100%;
     height: max-content;
     overflow-y: hidden;
+}
+.div-responsivex:hover::-webkit-scrollbar-thumb, .div-responsive:hover::-webkit-scrollbar-thumb{
+    display: block;
 }
 ::-webkit-scrollbar{
     width: 5px;
@@ -513,6 +514,7 @@
 }
 ::-webkit-scrollbar-thumb{
     background: var(--c10);
+    display: none;
 }
 ::-webkit-scrollbar-thumb:hover{
     background-color: var(--c8);
