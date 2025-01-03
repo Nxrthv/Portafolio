@@ -25,7 +25,7 @@
 }
 
 .nav-pills {
-    background-color: var(--c6);
+    background-color: var(--c12);
 }
 
 .tab-link {
@@ -34,17 +34,20 @@
     border: none;
     border-radius: 50%;
     font-size: 1.3em;
-    background-color: var(--c6);
-    color: var(--c9);
+    background-color: var(--c12);
+    color: var(--c8);
 }
-
+.tab-link:hover{
+    color: var(--c1);
+    transform: scale(125%) rotate(360deg);
+}
 .tab-link.active {
-    color: var(--c12);
+    color: var(--c1);
+    transform: scale(125%);
 }
 
 .tab-link:focus {
-    color: var(--c12);
-    transform: scale(105%);
+    color: var(--c1);
 }
 
 /* Redes */
@@ -374,16 +377,16 @@
     height: 330px;
 }
 
-.card1 .boxshadow {
+.card1:hover .boxshadow {
     position: absolute;
     height: 100%;
     width: 100%;
-    border: 1px solid #0E1C30;
     transform: scale(0.8);
-    box-shadow: #137DAE 20px 40px 70px;
+    box-shadow: 25px 25px 35px 25px #137DAE;
 }
 
 .card1 .main {
+    border: 2px solid var(--c11);
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -398,7 +401,6 @@
     width: 0px;
     height: 0px;
     z-index: 2;
-    border-top: 115px solid black;
     border-left: 115px solid transparent;
     border-right: 115px solid transparent;
     transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -410,7 +412,7 @@
     top: 0;
     transform: translateX(-50%);
     height: 101%;
-    background: black;
+    background: var(--c12);
     -webkit-clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
     clip-path: polygon(0% 0%, 50% 0, 95% 45%, 100% 100%, 0% 100%);
     transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86) 1s;
@@ -450,9 +452,9 @@
     padding: 5px 10px;
     -webkit-clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
     clip-path: polygon(0 0, 100% 0, 81% 100%, 21% 100%);
-    background: black;
+    background: var(--c12);
     border: none;
-    color: white;
+    color: var(--c1);
     display: grid;
     place-content: center;
     transition: all 0.5s cubic-bezier(0.785, 0.135, 0.15, 0.86);
@@ -520,7 +522,7 @@
 }
     
 /* Scrooll */
-::-webkit-scrollbar-corner {
+::-webkit-scrollbar {
     background: var(--c10);
     border-radius: 5px;
     width: 5px;
