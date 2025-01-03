@@ -353,7 +353,7 @@
 /* Games */
 .card1 {
     position: relative;
-    height: 330px;
+    height: 360px;
 }
 
 .card1:hover .boxshadow {
@@ -440,17 +440,17 @@
 }
 
 .card1 .main .button-container .button:nth-child(1) {
-    bottom: 320px;
+    bottom: 360px;
     transition-delay: 0.4s;
 }
 
 .card1 .main .button-container .button:nth-child(2) {
-    bottom: 320px;
+    bottom: 360px;
     transition-delay: 0.6s;
 }
 
 .card1 .main .button-container .button:nth-child(3) {
-    bottom: 320px;
+    bottom: 360px;
     transition-delay: 0.8s;
 }
 
