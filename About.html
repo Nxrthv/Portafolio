@@ -23,7 +23,7 @@
     </div>
 </div>
 
-<body style="background-color: var(--c12)">
+<body style="background-color: var(--c12)" class="fira-sans">
     <section class="tab-content justify-content-center">
         <ul class="nav nav-pills d-flex col-8 col-lg-2 p-2 mt-4 mx-auto justify-content-evenly rounded-pill"
             id="tabList" role="tablist">
@@ -54,7 +54,8 @@
                     <p class="display-5">Andres Vargas</p>
                     <p style="font-size: 18px">Welcome to My personal website 👋🏼</p>
                     <p style="font-size: 22px">
-                        <i class="bi bi-code"></i> I a Software Engeiner and Web Developed
+                        <i class="bi bi-code"></i>
+                        <span id="dynamic-text"></span>
                         <i class="bi bi-code-slash"></i>
                     </p>
                     <div class="col-12 col-lg-6 d-flex">
@@ -168,6 +169,7 @@
                         <p class="fw-bold mx-2 mt-3">Playlist</p>
                     </div>
                     <div class="div-responsive">
+                        <div id="alphabet-indicator"></div>
                         <a href="https://www.youtube.com/watch?v=h2H6CtuUkcs" target="_blank" class="loader1">
                             <div class="song">
                                 <p class="name">Used to be</p>
@@ -181,6 +183,7 @@
                                 <div class="load"></div>
                             </div>
                         </a>
+                        
                         <div id="song-list"></div>
                     </div>
                 </div>
@@ -189,7 +192,7 @@
                 <div class="d-flex align-content-center mb-2 justify-content-center">
                     <i class="bi bi-steam"
                         style="font-size: 2em; background: linear-gradient(to bottom, #0E1C30, #137FB0); -webkit-background-clip: text; color: transparent;"></i>
-                    <p class="fw-bold mx-2 mt-3 text-white">Best Games</p>
+                    <p class="fw-bold mx-2 mt-3 text-white">Let's Play?</p>
                 </div>
                 <div class="div-responsivex d-flex px-4 pb-5" style="gap: 1.5em;">
                     <div class="card1 col-8 col-md-6 col-lg-3">
@@ -198,7 +201,7 @@
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Call of Duty Mobile</div>
+                            <div class="title align-content-center"><img src="/Imgs/codm.png" width="160px"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -221,7 +224,7 @@
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Minecraft</div>
+                            <div class="title align-content-center"><img src="/Imgs/minecraft.png" width="180px"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -244,7 +247,7 @@
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Wild Rift</div>
+                            <div class="title align-content-center"><img src="/Imgs/wr.png" width="130px"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -267,7 +270,7 @@
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Left 4 Dead</div>
+                            <div class="title align-content-center"><img src="/Imgs/l4d2.png" width="160px"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -290,7 +293,7 @@
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Plants vs Zombies Garden Warfare</div>
+                            <div class="title align-content-center"><img src="/Imgs/pvzgw.png" width="140px"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -309,11 +312,11 @@
                     </div>
                     <div class="card1 col-8 col-md-6 col-lg-3">
                         <div class="boxshadow"></div>
-                        <div class="main" style="background-image: url('https://i.pinimg.com/736x/1b/6a/08/1b6a08ce977ea98e66168cfe9dc49487.jpg'); background-size: cover; background-position: top;">
+                        <div class="main" style="background-image: url('https://i.pinimg.com/736x/da/a1/58/daa15842c61ecb03edd8a0d868777121.jpg'); background-size: cover; background-position: top;">
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Diablo Inmortal III</div>
+                            <div class="title align-content-center"><img src="Imgs/diabloIII.png" width="150px"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -336,7 +339,7 @@
                             <div class="top"></div>
                             <div class="left side"></div>
                             <div class="right side"></div>
-                            <div class="title text-center">Blood Strike</div>
+                            <div class="title align-content-center"><img src="/Imgs/bs.png" width="200px" style="filter: invert(1);"></div>
                             <div class="button-container">
                                 <button class="button">
                                     <span class="tooltip1">Nothing USER</span>
@@ -355,10 +358,48 @@
                     </div>
                 </div>
             </section>
+            <!-- <section>
+                <video autoplay loop muted plays-inline>
+                    <source src="/Video/robot-salvaje.mp4" type="video/mp4">
+                </video>
+            </section> -->
         </div>
     </section>
 </body>
 <script src="/JavaScript/Scripts.js"></script>
+<script>
+    const words = ["I a Software Engineer...", "I a Web Developer...", "I a Programmer...", "I a Tech Enthusiast..."];
+    const dynamicText = document.getElementById("dynamic-text");
+
+    let wordIndex = 0;
+    let charIndex = 0;
+    let isDeleting = false;
+    let typingSpeed = 100;
+    let pauseBetweenWords = 300;
+
+    function typeEffect() {
+        const currentWord = words[wordIndex];
+
+        if (!isDeleting) {
+            dynamicText.textContent = currentWord.slice(0, charIndex++);
+        } else {
+            dynamicText.textContent = currentWord.slice(0, charIndex--);
+        }
+
+        if (!isDeleting && charIndex === currentWord.length) {
+            isDeleting = true;
+            typingSpeed = pauseBetweenWords;
+        } else if (isDeleting && charIndex === 0) {
+            isDeleting = false;
+            wordIndex = (wordIndex + 1) % words.length;
+            typingSpeed = 100;
+        }
+
+        setTimeout(typeEffect, typingSpeed);
+    }
+
+    typeEffect();
+</script>
 <script>
     fetch("/Files/Songs.json")
         .then((response) => response.json())
@@ -366,6 +407,8 @@
             songs.sort((a, b) => a.artist.localeCompare(b.artist));
 
             const songList = document.getElementById("song-list");
+            const alphabetIndicator = document.getElementById("alphabet-indicator");
+
             songs.forEach((song) => {
                 const linkElement = document.createElement("a");
                 linkElement.href = song.link;
@@ -395,7 +438,25 @@
                 linkElement.appendChild(songDiv);
                 linkElement.appendChild(playIcon);
 
+                // Añade un atributo data-artist para identificar las letras
+                linkElement.setAttribute("data-artist", song.artist[0].toUpperCase());
+
                 songList.appendChild(linkElement);
+            });
+
+            // Usa IntersectionObserver para detectar la letra visible
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        const artistLetter = entry.target.getAttribute("data-artist");
+                        alphabetIndicator.textContent = artistLetter;
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            // Observa cada canción
+            document.querySelectorAll("#song-list a").forEach((item) => {
+                observer.observe(item);
             });
         })
         .catch((error) => console.error("Error loading songs:", error));
@@ -426,7 +487,7 @@
             const isActive = index === 0 ? 'active' : '';
             const navButton = `
           <li class="m-1">
-            <a class="link-item px-3 py-2 rounded-pill ${isActive}" href="#" data-title="${movie.title}"">${movie.title}</a>
+            <a class="link-item px-3 py-2 rounded-pill fw-light ${isActive}" href="#" data-title="${movie.title}"">${movie.title}</a>
           </li>
         `;
             movieNav.insertAdjacentHTML('beforeend', navButton);
@@ -461,6 +522,25 @@
             </div>
         `;
     }
+    
+    const navContainer = document.getElementById("movie-nav");
+
+    document.querySelectorAll("#movie-nav link-item").forEach(item => {
+        item.addEventListener("click", () => {
+            const containerWidth = navContainer.offsetWidth;
+            const itemLeft = item.offsetLeft; // Distancia desde el inicio del contenedor
+            const itemWidth = item.offsetWidth;
+
+            // Calculamos el desplazamiento deseado para centrar el elemento
+            const scrollPosition = itemLeft - containerWidth / 2 + itemWidth / 2;
+
+            navContainer.scrollTo({
+                left: scrollPosition,
+                behavior: "smooth", // Desplazamiento suave
+            });
+        });
+    });
+
 </script>
 
 </html>

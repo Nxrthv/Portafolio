@@ -1,3 +1,19 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&display=swap'); */
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200..800&family=Fira+Sans+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.fira-sans{
+    font-family: "Fira Sans Condensed", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+/* .dosis {
+    font-family: "Dosis", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+} */
+
 :root {
     --c1: #f6f6f6;
     --c2: #e7e7e7;
@@ -92,6 +108,18 @@
 }
 
 /* About Me */
+#dynamic-text {
+    display: inline-block;
+    border-right: 2px solid white;
+    animation: blink 0.7s steps(1) infinite;
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
 .text {
     color: var(--c1);
     font-size: 18px;
@@ -327,6 +355,15 @@
     margin-top: -1.5em;
     font-size: 0.7em;
 }
+#alphabet-indicator {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    font-size: 1em;
+    background-color: transparent;
+    color: white;
+    text-align: end;
+}
 
 /* Movies */
 .link-item {
@@ -408,6 +445,7 @@
     opacity: 0;
     z-index: -1;
     transition: all 0.2s ease-out 0s;
+    text-shadow: 10px 5px 10px #000000;
 }
 
 .card1 .main .button-container {
@@ -503,7 +541,9 @@
     width: 100%;
     height: max-content;
     overflow-y: hidden;
+    overflow-x: auto;
 }
+
 .div-responsivex:hover::-webkit-scrollbar-thumb, .div-responsive:hover::-webkit-scrollbar-thumb{
     display: block;
 }
