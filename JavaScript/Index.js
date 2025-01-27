@@ -8,35 +8,6 @@ fetch('Files/Projects.json')
       const card = document.createElement('div');
       card.classList.add('card');
 
-      const topSection = document.createElement('div');
-      topSection.classList.add('top-section');
-
-      const iconsDiv = document.createElement('div');
-      iconsDiv.classList.add('icons');
-
-      const logoDiv = document.createElement('div');
-      logoDiv.classList.add('logo');
-      const githubIcon = document.createElement('i');
-      githubIcon.classList.add('fa-brands', 'fa-github');
-      logoDiv.appendChild(githubIcon);
-      iconsDiv.appendChild(logoDiv);
-
-      const socialMediaDiv = document.createElement('div');
-      socialMediaDiv.classList.add('social-media');
-      const html5Icon = document.createElement('i');
-      html5Icon.classList.add('fa-brands', 'fa-html5');
-      socialMediaDiv.appendChild(html5Icon);
-      const css3Icon = document.createElement('i');
-      css3Icon.classList.add('fa-brands', 'fa-css3');
-      socialMediaDiv.appendChild(css3Icon);
-      const jsIcon = document.createElement('i');
-      jsIcon.classList.add('fa-brands', 'fa-square-js');
-      socialMediaDiv.appendChild(jsIcon);
-      iconsDiv.appendChild(socialMediaDiv);
-
-      topSection.appendChild(iconsDiv);
-      card.appendChild(topSection);
-
       // Project Image
       const imagen = document.createElement('img');
       imagen.classList.add('img-project');
@@ -84,7 +55,7 @@ fetch('Files/Projects.json')
       const link = document.createElement('a');
       link.href = datos.link;
       const rightAngleIcon = document.createElement('i');
-      rightAngleIcon.classList.add('bi', 'bi-link-45deg');
+      rightAngleIcon.classList.add('bi', 'bi-folder-symlink');
       link.appendChild(rightAngleIcon);
       redirectionDiv.appendChild(link);
       row1Div.appendChild(redirectionDiv);
@@ -132,25 +103,29 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // Displacement Animation
-document.addEventListener('scroll', function() {
-  var cards = document.querySelectorAll('.card');
-  var windowHeight = window.innerHeight;
-
-  cards.forEach(function(card) {
-      var boxPosition = card.getBoundingClientRect().top;
-
-      if (boxPosition < windowHeight) {
-          card.classList.add('visible');
-      } else {
-          card.classList.remove('visible');
-      }
+const observer = new IntersectionObserver((entries, observer) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
   });
+}, {
+  threshold: 0.25
+});
+
+const cards = document.querySelectorAll('.card');
+cards.forEach(card => {
+  observer.observe(card);
 });
 
 const scrollButton = document.getElementById('mover');
-
 scrollButton.addEventListener('click', function() {
-    const destino = document.getElementById('projects');
-    destino.scrollIntoView({ behavior: 'smooth' });
-    window.scrollTo({ top: destino.offsetTop - 2 * 16, behavior: 'smooth' });
+  const destino = document.getElementById('projects');
+  destino.scrollIntoView({ behavior: 'smooth' });
+
+  window.setTimeout(() => {
+    window.scrollBy(0, -20);
+  }, 500);
 });
